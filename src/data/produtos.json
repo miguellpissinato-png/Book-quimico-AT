@@ -11,10 +11,6 @@
     ],
     "fabricante": "Audax Química (Audax Co)",
     "revisao": "04/2021",
-    "areas": [
-      "assistencia",
-      "engenharia"
-    ],
     "pdf": "fichas/pdf/alcool-gel-70.pdf",
     "telefoneEmergencia": "0800 014 8110",
     "uso": "Desinfetante de uso geral em gel à base de álcool. Limpeza de superfícies laváveis em geral: vitrines, espelhos, vidros, pisos, fórmicas, azulejos, bancadas, equipamentos e utensílios.",
@@ -46,10 +42,6 @@
     ],
     "fabricante": "Química Credie Ltda.",
     "revisao": "2012-01-15",
-    "areas": [
-      "assistencia",
-      "engenharia"
-    ],
     "pdf": "fichas/pdf/alcool-isopropilico.pdf",
     "telefoneEmergencia": "0800 11 8270",
     "uso": "Solvente.",
@@ -83,10 +75,6 @@
     ],
     "fabricante": "Alfatec Indústria e Comércio Ltda.",
     "revisao": "2021-07-15",
-    "areas": [
-      "assistencia",
-      "engenharia"
-    ],
     "pdf": "fichas/pdf/fluxo-de-solda-alfatec-rma.pdf",
     "telefoneEmergencia": "(92) 3303-3018",
     "uso": "Fluxo de solda (Fluxo Alfatec / Amtech pastoso RMA — seringas 10cc).",
@@ -120,10 +108,6 @@
     ],
     "fabricante": "BASF S.A.",
     "revisao": "2020-10-29",
-    "areas": [
-      "assistencia",
-      "engenharia"
-    ],
     "pdf": "fichas/pdf/suvinil-spray-multiverniz-brilhante.pdf",
     "telefoneEmergencia": "0800 011 2273",
     "uso": "Aplicações decorativas (pulverizável).",
@@ -161,10 +145,6 @@
     ],
     "fabricante": "BASF S.A.",
     "revisao": "2020-10-29",
-    "areas": [
-      "assistencia",
-      "engenharia"
-    ],
     "pdf": "fichas/pdf/suvinil-spray-sua-arte-fosco-branco.pdf",
     "telefoneEmergencia": "0800 011 2273",
     "uso": "Aplicações decorativas (pulverizável).",

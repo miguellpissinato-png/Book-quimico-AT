@@ -14,7 +14,7 @@ produto e mostra/envia a ficha de segurança (FDS) para o médico — sem procur
 | **Início** | Dois caminhos: *Houve um acidente* (vermelho) e *Consultar documentos*. Botões fixos para ligar para o **SAMU (192)** e o **Disque-Intoxicação (0800 722 6001)**. |
 | **Emergência** | Grade com as fotos das embalagens: toque no produto que causou o acidente. |
 | **Ficha do produto** | Primeiros socorros, perigos, composição e telefone do fabricante. Botões **Abrir PDF**, **Baixar PDF** e **Enviar** (WhatsApp, e-mail…). A tela fica acesa enquanto é mostrada ao médico. |
-| **Documentos** | Lista completa com busca (ignora acentos) e filtro por área (Assistência Técnica / Engenharia). Botão para **salvar todas as fichas no celular** e abrir mesmo sem sinal. |
+| **Documentos** | Lista única com todas as fichas (Assistência Técnica e Engenharia juntas), com busca que ignora acentos e encontra por nome, marca ou fabricante. Botão para **salvar todas as fichas no celular** e abrir mesmo sem sinal. |
 | **Registros** | Registro de ocorrências. Ver abaixo. |
 
 ### Registro de ocorrências
@@ -58,12 +58,11 @@ escondidas (testado de 280 px — Galaxy Fold — até tablets, em pé e deitado
 Já cadastradas: álcool gel 70°, álcool isopropílico, fluxo de solda RMA (Alfatec) e os sprays Suvinil (fosco branco e multiverniz). Fichas marcadas com `"exemplo": true` mostram um aviso amarelo no app.
 Para colocar as reais:
 
-1. Copie os PDFs para as pastas da área correspondente:
+1. Copie os PDFs para `public/fichas/pdf/`:
    ```
-   public/fichas/pdf/assistencia/Álcool isopropílico.pdf
-   public/fichas/pdf/engenharia/Fluxo de solda.pdf
+   public/fichas/pdf/Álcool isopropílico.pdf
+   public/fichas/pdf/Fluxo de solda.pdf
    ```
-   (Se o produto é usado nas duas áreas, coloque o PDF nas duas pastas.)
 2. (Opcional, mas ajuda muito na emergência) Coloque a **foto da embalagem** em
    `public/fichas/fotos/` com o **mesmo nome** do PDF (`Álcool isopropílico.jpg`).
    Fotos quadradas ou 4:3, com até ~200 KB cada, deixam o app rápido.
@@ -82,8 +81,7 @@ Para colocar as reais:
   "sinonimos": ["IPA", "isopropanol"],   // outros nomes usados na busca
   "fabricante": "Nome do fabricante",
   "revisao": "2024-03-01",               // data de revisão da FDS (AAAA-MM-DD)
-  "areas": ["assistencia", "engenharia"],
-  "pdf": "fichas/pdf/assistencia/Álcool isopropílico.pdf",
+  "pdf": "fichas/pdf/Álcool isopropílico.pdf",
   "foto": "fichas/fotos/Álcool isopropílico.jpg",
   "telefoneEmergencia": "0800 000 0000", // seção 1 da FDS (vira botão de ligar)
   "uso": "Limpeza de placas.",
@@ -100,7 +98,7 @@ Para colocar as reais:
 }
 ```
 
-Só `id`, `nome` e `areas` são obrigatórios — o que não for preenchido simplesmente não aparece.
+Só `id` e `nome` são obrigatórios — o que não for preenchido simplesmente não aparece.
 `npm test` confere se o arquivo está correto (ids repetidos, PDFs/fotos que não existem etc.).
 
 > ⚠️ Os textos de primeiros socorros devem ser **copiados da FDS oficial** do fabricante. Revise
@@ -157,7 +155,7 @@ passo é adicionar login (Supabase Auth) e restringir a leitura na política de 
 ## Estrutura
 
 ```
-public/fichas/pdf/        PDFs das FDS (assistencia/, engenharia/)
+public/fichas/pdf/        PDFs das FDS
 public/fichas/fotos/      Fotos das embalagens
 src/data/produtos.json    Cadastro das fichas  ← o arquivo que você edita
 src/data/contatos.ts      Telefones de emergência (SAMU, Disque-Intoxicação)

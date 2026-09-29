@@ -9,22 +9,18 @@ const produtos = dados as Produto[];
 describe('busca de produtos', () => {
   it('ignora acentos e maiúsculas', () => {
     expect(semAcento('Álcool ISOPROPÍLICO')).toBe('alcool isopropilico');
-    const lista: Produto[] = [{ id: 'a', nome: 'Álcool isopropílico', areas: ['assistencia'] }];
+    const lista: Produto[] = [{ id: 'a', nome: 'Álcool isopropílico' }];
     expect(filtrarProdutos(lista, 'ALCOOL iso')).toHaveLength(1);
   });
   it('encontra por sinônimo e fabricante', () => {
-    const lista: Produto[] = [{ id: 'a', nome: 'Adesivo', sinonimos: ['super cola'], fabricante: 'Loctite', areas: ['engenharia'] }];
+    const lista: Produto[] = [{ id: 'a', nome: 'Adesivo', sinonimos: ['super cola'], fabricante: 'Loctite' }];
     expect(filtrarProdutos(lista, 'super cola')).toHaveLength(1);
     expect(filtrarProdutos(lista, 'loctite')).toHaveLength(1);
     expect(filtrarProdutos(lista, 'graxa')).toHaveLength(0);
   });
-  it('filtra por área', () => {
-    const lista: Produto[] = [
-      { id: 'a', nome: 'A', areas: ['assistencia'] },
-      { id: 'b', nome: 'B', areas: ['engenharia', 'assistencia'] },
-    ];
-    expect(filtrarProdutos(lista, '', 'engenharia').map((p) => p.id)).toEqual(['b']);
-    expect(filtrarProdutos(lista, '', 'assistencia')).toHaveLength(2);
+  it('sem busca, mostra todas as fichas', () => {
+    const lista: Produto[] = [{ id: 'a', nome: 'A' }, { id: 'b', nome: 'B' }];
+    expect(filtrarProdutos(lista, '  ')).toHaveLength(2);
   });
   it('coloca destaques primeiro na emergência', () => {
     const ordenados = [...produtos].sort(ordemEmergencia);
@@ -45,12 +41,8 @@ describe('cadastro das fichas (src/data/produtos.json)', () => {
   it('toda ficha tem PDF cadastrado', () => {
     for (const p of produtos) expect(p.pdf, p.id).toBeTruthy();
   });
-  it('toda ficha tem nome e ao menos uma área válida', () => {
-    for (const p of produtos) {
-      expect(p.nome, p.id).toBeTruthy();
-      expect(p.areas.length, p.id).toBeGreaterThan(0);
-      for (const a of p.areas) expect(['assistencia', 'engenharia'], p.id).toContain(a);
-    }
+  it('toda ficha tem nome', () => {
+    for (const p of produtos) expect(p.nome, p.id).toBeTruthy();
   });
   it('PDFs e fotos cadastrados existem em public/', () => {
     for (const p of produtos) {

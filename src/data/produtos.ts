@@ -1,12 +1,5 @@
 import dados from './produtos.json';
 
-export type Area = 'assistencia' | 'engenharia';
-
-export const AREAS: Record<Area, string> = {
-  assistencia: 'Assistência Técnica',
-  engenharia: 'Engenharia',
-};
-
 export type PrimeirosSocorros = {
   /** Indicações gerais para quem presta o socorro (opcional). */
   geral?: string;
@@ -27,7 +20,6 @@ export type Produto = {
   fabricante?: string;
   /** Data de revisão da FDS, no formato AAAA-MM-DD. */
   revisao?: string;
-  areas: Area[];
   /** Caminho do PDF dentro de public/. Ex.: "fichas/pdf/alcool-isopropilico.pdf". */
   pdf?: string;
   /** Foto da embalagem dentro de public/. Ex.: "fichas/fotos/alcool-isopropilico.jpg". */
@@ -62,11 +54,10 @@ export function semAcento(texto: string | undefined): string {
     .trim();
 }
 
-/** Filtra por texto (nome, sinônimos, fabricante) e área. Todas as palavras precisam aparecer. */
-export function filtrarProdutos(lista: Produto[], termo: string, area: Area | 'todas' = 'todas'): Produto[] {
+/** Filtra por texto (nome, sinônimos, fabricante). Todas as palavras precisam aparecer. */
+export function filtrarProdutos(lista: Produto[], termo: string): Produto[] {
   const palavras = semAcento(termo).split(/\s+/).filter(Boolean);
   return lista.filter((p) => {
-    if (area !== 'todas' && !p.areas.includes(area)) return false;
     if (palavras.length === 0) return true;
     const alvo = semAcento([p.nome, p.fabricante, ...(p.sinonimos || [])].join(' '));
     return palavras.every((w) => alvo.includes(w));

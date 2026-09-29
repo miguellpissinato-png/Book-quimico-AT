@@ -1,29 +1,23 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { BarraAbas, Cabecalho, CampoBusca, FotoEmbalagem, Rolagem } from '../components/Estrutura';
 import { Icone } from '../components/Icone';
-import { AREAS, filtrarProdutos, formatarRevisao, ordemAlfabetica, PRODUTOS, type Area } from '../data/produtos';
+import { filtrarProdutos, formatarRevisao, ordemAlfabetica, PRODUTOS } from '../data/produtos';
 import { avisar } from '../lib/aviso';
 import { contarPdfsOffline, salvarTodosOffline } from '../lib/fichas';
 import { navegar } from '../lib/router';
 
 const ordenados = [...PRODUTOS].sort(ordemAlfabetica);
-// Guardados fora do componente: ao voltar de uma ficha, a busca e o filtro continuam iguais.
+// Guardada fora do componente: ao voltar de uma ficha, a busca continua igual.
 let buscaSalva = '';
-let areaSalva: Area | 'todas' = 'todas';
 
 export function Documentos() {
   const [busca, setBusca] = useState(buscaSalva);
-  const [area, setArea] = useState<Area | 'todas'>(areaSalva);
   const termo = useDeferredValue(busca);
-  const lista = useMemo(() => filtrarProdutos(ordenados, termo, area), [termo, area]);
+  const lista = useMemo(() => filtrarProdutos(ordenados, termo), [termo]);
 
   const mudarBusca = (v: string) => {
     buscaSalva = v;
     setBusca(v);
-  };
-  const mudarArea = (a: Area | 'todas') => {
-    areaSalva = a;
-    setArea(a);
   };
 
   const total = PRODUTOS.length;
@@ -39,17 +33,10 @@ export function Documentos() {
           aoMudar={mudarBusca}
           placeholder="Ex.: álcool, fluxo, spray…"
         />
-        <div className="filtros" role="group" aria-label="Filtrar por área">
-          {(['todas', ...Object.keys(AREAS)] as (Area | 'todas')[]).map((a) => (
-            <button key={a} type="button" className="filtro" aria-pressed={area === a} onClick={() => mudarArea(a)}>
-              {a === 'todas' ? 'Todas as áreas' : AREAS[a]}
-            </button>
-          ))}
-        </div>
       </Cabecalho>
       <Rolagem chave="documentos">
         <div className="conteudo">
-          {(termo || area !== 'todas') && (
+          {termo && (
             <span className="salvo-em" aria-live="polite">
               {lista.length} resultado{lista.length === 1 ? '' : 's'}
             </span>
@@ -68,8 +55,7 @@ export function Documentos() {
                 <span className="textos">
                   <span className="nome">{p.nome}</span>
                   <span className="meta">
-                    {[p.fabricante, p.revisao && `FDS rev. ${formatarRevisao(p.revisao)}`].filter(Boolean).join(' · ') ||
-                      p.areas.map((a) => AREAS[a]).join(' · ')}
+                    {[p.fabricante, p.revisao && `FDS rev. ${formatarRevisao(p.revisao)}`].filter(Boolean).join(' · ')}
                   </span>
                 </span>
                 <Icone nome="seta" tamanho={18} espessura={2.2} className="seta" />
@@ -77,7 +63,7 @@ export function Documentos() {
             ))}
           </div>
           {lista.length === 0 && (
-            <div className="vazio">Nenhum produto encontrado. Tente outro nome ou mude o filtro de área.</div>
+            <div className="vazio">Nenhum produto encontrado. Tente outro nome, a marca ou o fabricante.</div>
           )}
           <UsoOffline />
         </div>

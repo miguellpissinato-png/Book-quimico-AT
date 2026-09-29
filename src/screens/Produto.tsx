@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Cabecalho, FaixaEmergencia, FotoEmbalagem, Rolagem } from '../components/Estrutura';
 import { Icone, type NomeIcone } from '../components/Icone';
 import { linkTelefone } from '../data/contatos';
-import { AREAS, buscarProduto, formatarRevisao, type PrimeirosSocorros, type Produto as TProduto } from '../data/produtos';
+import { buscarProduto, formatarRevisao, type PrimeirosSocorros, type Produto as TProduto } from '../data/produtos';
 import { avisar } from '../lib/aviso';
 import { compartilharPdf, nomeArquivo, prepararArquivo, urlPdf } from '../lib/fichas';
 import type { TipoAcao } from '../lib/ocorrencias/modelo';
@@ -95,13 +95,6 @@ export function Produto({ id, origem }: { id: string; origem: 'emergencia' | 'do
               </h2>
               {p.fabricante && <span className="meta">Fabricante: {p.fabricante}</span>}
               {revisao && <span className="meta">FDS · revisão {revisao}</span>}
-              <div className="etiquetas">
-                {p.areas.map((a) => (
-                  <span key={a} className="etiqueta">
-                    {AREAS[a]}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
 

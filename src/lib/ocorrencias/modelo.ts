@@ -1,4 +1,10 @@
-import type { Area } from '../../data/produtos';
+/** Área onde a ocorrência aconteceu (campo do registro). */
+export type Area = 'assistencia' | 'engenharia';
+
+export const AREAS: Record<Area, string> = {
+  assistencia: 'Assistência Técnica',
+  engenharia: 'Engenharia',
+};
 
 export type TipoAcao =
   | 'produto_consultado'

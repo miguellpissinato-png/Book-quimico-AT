@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { Cabecalho, Rolagem } from '../components/Estrutura';
 import { Icone } from '../components/Icone';
-import { AREAS, PRODUTOS } from '../data/produtos';
+import { PRODUTOS } from '../data/produtos';
 import { avisar } from '../lib/aviso';
 import {
+  AREAS,
   formatarDataHora,
   formatarHora,
   ROTULO_ACAO,
