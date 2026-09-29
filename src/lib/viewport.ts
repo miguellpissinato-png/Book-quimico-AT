@@ -14,11 +14,20 @@
  *   data-teclado="aberto"  quando o teclado virtual está na tela
  *   data-standalone        quando aberto como app instalado (tela inicial)
  */
+/**
+ * Abaixo disto a medida é considerada inválida. Alguns navegadores (navegador interno do
+ * WhatsApp, abas abertas em segundo plano) informam altura 0 ao carregar e não avisam
+ * quando ela muda: usar esse valor deixava o app com 0 px de altura — tela em branco.
+ */
+const ALTURA_MINIMA = 80;
+
 export function iniciarAjusteDeTela(): () => void {
   const root = document.documentElement;
   const vv = window.visualViewport;
   let alturaSemTeclado = window.innerHeight;
   let quadro = 0;
+  let tentativas = 0;
+  let timerNovaTentativa: ReturnType<typeof setTimeout> | undefined;
 
   const medir = () => {
     quadro = 0;
@@ -27,6 +36,18 @@ export function iniciarAjusteDeTela(): () => void {
     const semZoom = !vv || Math.abs(vv.scale - 1) < 0.01;
     const altura = vv && semZoom ? vv.height : window.innerHeight;
     const topo = vv && semZoom ? vv.offsetTop : 0;
+
+    if (!(altura >= ALTURA_MINIMA)) {
+      // Medida inválida: volta para a altura padrão do CSS (100dvh) e mede de novo logo depois.
+      root.style.removeProperty('--app-height');
+      root.style.removeProperty('--app-top');
+      if (tentativas++ < 40) {
+        clearTimeout(timerNovaTentativa);
+        timerNovaTentativa = setTimeout(agendar, 250);
+      }
+      return;
+    }
+    tentativas = 0;
 
     const campoFocado = isCampoDeTexto(document.activeElement);
     if (!campoFocado) alturaSemTeclado = Math.max(window.innerHeight, altura);
@@ -61,6 +82,12 @@ export function iniciarAjusteDeTela(): () => void {
   window.addEventListener('orientationchange', aposGirar);
   document.addEventListener('focusin', agendar);
   document.addEventListener('focusout', aposGirar);
+  // A página voltou a ficar visível (aba trazida para frente, app reaberto): mede de novo.
+  window.addEventListener('pageshow', aposGirar);
+  document.addEventListener('visibilitychange', aposGirar);
+  // Rede de segurança: qualquer mudança no tamanho da janela, mesmo sem evento "resize".
+  const observador = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(agendar) : undefined;
+  observador?.observe(root);
 
   const standalone =
     window.matchMedia('(display-mode: standalone)').matches ||
@@ -74,6 +101,10 @@ export function iniciarAjusteDeTela(): () => void {
     window.removeEventListener('orientationchange', aposGirar);
     document.removeEventListener('focusin', agendar);
     document.removeEventListener('focusout', aposGirar);
+    window.removeEventListener('pageshow', aposGirar);
+    document.removeEventListener('visibilitychange', aposGirar);
+    observador?.disconnect();
+    clearTimeout(timerNovaTentativa);
   };
 }
 

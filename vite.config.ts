@@ -9,6 +9,11 @@ const base = process.env.BASE_PATH || '/';
 
 export default defineConfig({
   base,
+  build: {
+    // Gera código compatível com navegadores de ~2019 em diante (celulares e computadores
+    // mais antigos da empresa), em vez de exigir versões recentes.
+    target: ['es2019', 'chrome79', 'edge79', 'firefox78', 'safari13'],
+  },
   plugins: [
     react(),
     VitePWA({

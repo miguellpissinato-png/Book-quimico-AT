@@ -24,12 +24,118 @@
     <title>Book Químico — Elsys</title>
     <script>
       // Ajuste de altura antes do primeiro desenho da tela (evita "pulo" no carregamento).
-      document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px');
+      // Alguns navegadores informam 0 aqui (WhatsApp, aba em segundo plano): nesse caso o
+      // CSS usa a altura padrão e src/lib/viewport.ts mede de novo.
+      if (window.innerHeight >= 80) {
+        document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px');
+      }
     </script>
+    <style>
+      /* Tela de segurança: aparece só se o app não abrir. Não depende do CSS do app. */
+      #falha { position: fixed; inset: 0; z-index: 99999; overflow: auto; background: #f3f5f8; color: #1e2b3c;
+        font: 16px/1.45 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; padding: 24px 16px; }
+      #falha[hidden] { display: none; }
+      #falha .caixa { max-width: 480px; margin: 0 auto; }
+      #falha h1 { font-size: 20px; color: #002855; margin: 0 0 8px; }
+      #falha p { margin: 0 0 16px; }
+      #falha a.ligar { display: block; text-decoration: none; text-align: center; border-radius: 12px; padding: 14px;
+        margin-bottom: 10px; font-weight: 800; font-size: 18px; }
+      #falha a.samu { background: #c8102e; color: #fff; }
+      #falha a.intox { background: #fdecee; color: #9e0c24; }
+      #falha button { width: 100%; border: 0; border-radius: 12px; padding: 14px; margin: 8px 0 16px; background: #002855;
+        color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+      #falha pre { white-space: pre-wrap; word-break: break-word; font-size: 12px; color: #5a6b80; background: #fff;
+        border: 1px solid #e1e6ed; border-radius: 8px; padding: 10px; margin: 0; }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <noscript>Este aplicativo precisa de JavaScript. Em emergência ligue SAMU 192 ou Disque-Intoxicação 0800 722 6001.</noscript>
+
+    <!-- Nunca deixar tela em branco: se o app não aparecer, mostra os telefones e o motivo. -->
+    <div id="falha" hidden role="alert">
+      <div class="caixa">
+        <h1>O Book Químico não abriu corretamente</h1>
+        <p>Em caso de emergência, ligue agora:</p>
+        <a class="ligar samu" href="tel:192">SAMU — 192</a>
+        <a class="ligar intox" href="tel:08007226001">Disque-Intoxicação — 0800 722 6001</a>
+        <button type="button" id="falha-recarregar">Tentar abrir de novo</button>
+        <p>Se continuar assim, tire um print desta tela e envie para o responsável pelo app.</p>
+        <pre id="falha-detalhe"></pre>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var erros = [];
+        var falha = document.getElementById('falha');
+        function registrar(texto) {
+          if (erros.length < 5) erros.push(texto);
+        }
+        window.addEventListener(
+          'error',
+          function (e) {
+            var alvo = e.target;
+            if (alvo && alvo !== window && (alvo.src || alvo.href)) {
+              registrar('Não carregou: ' + (alvo.src || alvo.href));
+            } else {
+              registrar((e.message || 'Erro') + (e.filename ? ' (' + e.filename.split('/').pop() + ':' + e.lineno + ')' : ''));
+            }
+          },
+          true
+        );
+        window.addEventListener('unhandledrejection', function (e) {
+          registrar('Promessa rejeitada: ' + (e.reason && (e.reason.message || e.reason)));
+        });
+        function appVisivel() {
+          var r = document.getElementById('root');
+          return !!(r && r.firstChild && r.getBoundingClientRect().height > 40);
+        }
+        function verificar() {
+          if (appVisivel()) {
+            falha.hidden = true;
+            return;
+          }
+          document.getElementById('falha-detalhe').textContent =
+            (erros.length ? erros.join('\n') : 'Nenhum erro registrado (o app não apareceu na tela).') +
+            '\n\nNavegador: ' + navigator.userAgent +
+            '\nTela: ' + window.innerWidth + '×' + window.innerHeight +
+            '\nEndereço: ' + location.href;
+          falha.hidden = false;
+        }
+        // Confere aos 8 s e depois a cada 2 s (some sozinho se o app terminar de abrir).
+        setTimeout(function () {
+          verificar();
+          setInterval(verificar, 2000);
+        }, 8000);
+        document.getElementById('falha-recarregar').onclick = function () {
+          // Limpa versões antigas guardadas no aparelho antes de recarregar.
+          var pronto = function () {
+            location.replace(location.pathname + '?r=' + Date.now() + location.hash);
+          };
+          try {
+            var tarefas = [];
+            if (navigator.serviceWorker && navigator.serviceWorker.getRegistrations) {
+              tarefas.push(
+                navigator.serviceWorker.getRegistrations().then(function (regs) {
+                  return Promise.all(regs.map(function (r) { return r.unregister(); }));
+                })
+              );
+            }
+            if (window.caches && caches.keys) {
+              tarefas.push(
+                caches.keys().then(function (ks) {
+                  return Promise.all(ks.map(function (k) { return caches.delete(k); }));
+                })
+              );
+            }
+            Promise.all(tarefas).then(pronto, pronto);
+            setTimeout(pronto, 3000);
+          } catch (err) {
+            pronto();
+          }
+        };
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
