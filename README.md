@@ -119,11 +119,12 @@ npm run build    # gera a versão final em dist/
 
 O app é só um conjunto de arquivos estáticos, então pode ser hospedado de graça:
 
-**GitHub Pages** (repositório público, ou privado em plano pago do GitHub)
+**GitHub Pages** (repositório público — é o que usamos)
 1. No GitHub: *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
-2. Aba *Actions → Publicar no GitHub Pages → Run workflow* (o workflow
-   `.github/workflows/deploy.yml` testa, gera e publica; roda só manualmente).
-3. O endereço fica `https://<usuario>.github.io/Book-quimico-AT/`.
+2. A cada mudança na branch `main`, o workflow `.github/workflows/deploy.yml` testa, gera e
+   publica sozinho (acompanhe na aba *Actions*). Também dá para rodar manualmente em
+   *Actions → Publicar no GitHub Pages → Run workflow*.
+3. O endereço fica `https://miguellpissinato-png.github.io/Book-quimico-AT/`.
 
 **Netlify / Cloudflare Pages** (funcionam com repositório privado no plano gratuito)
 - Conecte o repositório; comando de build `npm run build`, pasta `dist` (o `netlify.toml` já
