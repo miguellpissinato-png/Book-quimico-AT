@@ -8,6 +8,8 @@ export const AREAS: Record<Area, string> = {
 };
 
 export type PrimeirosSocorros = {
+  /** Indicações gerais para quem presta o socorro (opcional). */
+  geral?: string;
   inalacao?: string;
   pele?: string;
   olhos?: string;

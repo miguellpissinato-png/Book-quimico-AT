@@ -37,7 +37,7 @@ export function Documentos() {
           rotulo="Buscar produto"
           valor={busca}
           aoMudar={mudarBusca}
-          placeholder="Ex.: álcool, pasta térmica…"
+          placeholder="Ex.: álcool, fluxo, spray…"
         />
         <div className="filtros" role="group" aria-label="Filtrar por área">
           {(['todas', ...Object.keys(AREAS)] as (Area | 'todas')[]).map((a) => (

@@ -11,6 +11,7 @@ import { navegar } from '../lib/router';
 import { formatarHora } from '../lib/ocorrencias/modelo';
 
 const SOCORROS: { chave: keyof PrimeirosSocorros; titulo: string; icone: NomeIcone }[] = [
+  { chave: 'geral', titulo: 'Indicações gerais', icone: 'info' },
   { chave: 'inalacao', titulo: 'Inalação', icone: 'pulmao' },
   { chave: 'pele', titulo: 'Contato com a pele', icone: 'mao' },
   { chave: 'olhos', titulo: 'Contato com os olhos', icone: 'olho' },
@@ -148,21 +149,6 @@ export function Produto({ id, origem }: { id: string; origem: 'emergencia' | 'do
 
           <ContatoFabricante p={p} aoLigar={() => registrar('ligou_fabricante')} />
 
-          {p.perigos && p.perigos.length > 0 && (
-            <section className="cartao" aria-labelledby="t-perigos">
-              <h2 id="t-perigos" className="cartao-titulo">
-                Principais perigos · seção 2 da FDS
-              </h2>
-              <div className="etiquetas">
-                {p.perigos.map((x) => (
-                  <span key={x} className="etiqueta vermelha">
-                    {x}
-                  </span>
-                ))}
-              </div>
-            </section>
-          )}
-
           <section className="cartao" aria-labelledby="t-socorros">
             <h2 id="t-socorros" className="cartao-titulo">
               Primeiros socorros · seção 4 da FDS
@@ -180,6 +166,22 @@ export function Produto({ id, origem }: { id: string; origem: 'emergencia' | 'do
               <p className="texto-ficha">Consulte a seção 4 da ficha completa (PDF).</p>
             )}
           </section>
+
+          {p.perigos && p.perigos.length > 0 && (
+            <section className="cartao" aria-labelledby="t-perigos">
+              <h2 id="t-perigos" className="cartao-titulo">
+                Principais perigos · seção 2 da FDS
+              </h2>
+              <ul className="lista-perigos">
+                {p.perigos.map((x) => (
+                  <li key={x}>
+                    <Icone nome="alerta" tamanho={16} />
+                    {x}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           {p.composicao && (
             <section className="cartao" aria-labelledby="t-composicao">

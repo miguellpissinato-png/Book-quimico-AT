@@ -9,15 +9,22 @@ const produtos = dados as Produto[];
 describe('busca de produtos', () => {
   it('ignora acentos e maiúsculas', () => {
     expect(semAcento('Álcool ISOPROPÍLICO')).toBe('alcool isopropilico');
-    expect(filtrarProdutos(produtos, 'alcool').map((p) => p.id)).toContain('alcool-isopropilico');
+    const lista: Produto[] = [{ id: 'a', nome: 'Álcool isopropílico', areas: ['assistencia'] }];
+    expect(filtrarProdutos(lista, 'ALCOOL iso')).toHaveLength(1);
   });
-  it('encontra por sinônimo', () => {
-    expect(filtrarProdutos(produtos, 'super cola').map((p) => p.id)).toEqual(['adesivo-instantaneo']);
+  it('encontra por sinônimo e fabricante', () => {
+    const lista: Produto[] = [{ id: 'a', nome: 'Adesivo', sinonimos: ['super cola'], fabricante: 'Loctite', areas: ['engenharia'] }];
+    expect(filtrarProdutos(lista, 'super cola')).toHaveLength(1);
+    expect(filtrarProdutos(lista, 'loctite')).toHaveLength(1);
+    expect(filtrarProdutos(lista, 'graxa')).toHaveLength(0);
   });
   it('filtra por área', () => {
-    const eng = filtrarProdutos(produtos, '', 'engenharia');
-    expect(eng.length).toBeGreaterThan(0);
-    expect(eng.every((p) => p.areas.includes('engenharia'))).toBe(true);
+    const lista: Produto[] = [
+      { id: 'a', nome: 'A', areas: ['assistencia'] },
+      { id: 'b', nome: 'B', areas: ['engenharia', 'assistencia'] },
+    ];
+    expect(filtrarProdutos(lista, '', 'engenharia').map((p) => p.id)).toEqual(['b']);
+    expect(filtrarProdutos(lista, '', 'assistencia')).toHaveLength(2);
   });
   it('coloca destaques primeiro na emergência', () => {
     const ordenados = [...produtos].sort(ordemEmergencia);
@@ -34,6 +41,9 @@ describe('cadastro das fichas (src/data/produtos.json)', () => {
     const ids = produtos.map((p) => p.id);
     expect(new Set(ids).size).toBe(ids.length);
     for (const id of ids) expect(id).toMatch(/^[a-z0-9-]+$/);
+  });
+  it('toda ficha tem PDF cadastrado', () => {
+    for (const p of produtos) expect(p.pdf, p.id).toBeTruthy();
   });
   it('toda ficha tem nome e ao menos uma área válida', () => {
     for (const p of produtos) {

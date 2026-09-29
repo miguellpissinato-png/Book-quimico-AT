@@ -1,221 +1,190 @@
 [
   {
+    "id": "alcool-gel-70",
+    "nome": "Álcool gel 70° INPM (Facilita)",
+    "sinonimos": [
+      "álcool 70",
+      "álcool etílico",
+      "etanol",
+      "Facilita",
+      "Audax"
+    ],
+    "fabricante": "Audax Química (Audax Co)",
+    "revisao": "04/2021",
+    "areas": [
+      "assistencia",
+      "engenharia"
+    ],
+    "pdf": "fichas/pdf/alcool-gel-70.pdf",
+    "telefoneEmergencia": "0800 014 8110",
+    "uso": "Desinfetante de uso geral em gel à base de álcool. Limpeza de superfícies laváveis em geral: vitrines, espelhos, vidros, pisos, fórmicas, azulejos, bancadas, equipamentos e utensílios.",
+    "perigos": [
+      "Líquido e vapores altamente inflamáveis",
+      "Provoca irritação ocular grave",
+      "Suspeito de provocar defeitos genéticos",
+      "Pode provocar danos ao fígado e ao sistema nervoso central por exposição repetida ou prolongada se ingerido",
+      "Suspeito de prejudicar a fertilidade ou o feto"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "Mova a vítima para local ventilado. Aplicar respiração artificial somente se a respiração cessar. Obtenha auxílio médico.",
+      "pele": "Lavar o local com água corrente e sabão. Remover as roupas e os sapatos da vítima se necessário. Lavar as roupas antes de usá-las novamente. Procurar ajuda médica e levar essa FISPQ.",
+      "olhos": "Lavar imediatamente os olhos com água corrente por no mínimo 15 minutos, mantendo as pálpebras abertas. Caso o desconforto persista, consultar um médico e apresentar embalagem/rótulo do produto. Leve esta FISPQ.",
+      "ingestao": "Lave a boca da vítima com água em abundância. NÃO INDUZA O VÔMITO. Não ofereça nada por via oral a uma pessoa inconsciente. Caso ocorra vômito, manter a cabeça mais baixa do que o tronco para evitar aspiração do produto. Procure atenção médica. Leve esta FISPQ.",
+      "notasMedico": "Mantenha a vítima em repouso e aquecida. Não forneça nada pela boca a uma pessoa inconsciente. O tratamento sintomático deve compreender, sobretudo, medidas de suporte como correção de distúrbios hidroeletrolíticos, metabólicos, além de assistência respiratória.\n\nSintomas mais importantes: pode provocar dermatite por exposição prolongada ou repetida. Provoca depressão do sistema nervoso central."
+    },
+    "composicao": "Mistura.\n• Álcool etílico — CAS 64-17-5 — 70 a 90%\n• Carbômero — CAS 9003-01-4 — 0,1 a 1,0%"
+  },
+  {
     "id": "alcool-isopropilico",
-    "nome": "Álcool isopropílico",
+    "nome": "Álcool isopropílico (solvente)",
     "sinonimos": [
       "IPA",
-      "isopropanol"
+      "isopropanol",
+      "álcool 2-propanol",
+      "solvente",
+      "Credie"
     ],
-    "fabricante": "[Fabricante]",
-    "revisao": "2025-01-15",
+    "fabricante": "Química Credie Ltda.",
+    "revisao": "2012-01-15",
     "areas": [
       "assistencia",
       "engenharia"
     ],
-    "pdf": "fichas/pdf/exemplo-fds.pdf",
-    "uso": "Limpeza de placas e contatos elétricos.",
+    "pdf": "fichas/pdf/alcool-isopropilico.pdf",
+    "telefoneEmergencia": "0800 11 8270",
+    "uso": "Solvente.",
     "perigos": [
-      "EXEMPLO — perigo da seção 2 da FDS"
+      "Líquido e vapores altamente inflamáveis",
+      "Tóxico se inalado ou absorvido pela pele",
+      "Causa irritação ocular séria",
+      "Pode provocar sonolência e vertigem",
+      "Irritante para vias aéreas, olhos e mucosas"
     ],
     "primeirosSocorros": {
-      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+      "inalacao": "Remover a vítima para local arejado. Se a vítima não estiver respirando, aplicar respiração artificial. Se a vítima estiver respirando, mas com dificuldades, administrar oxigênio a uma vazão de 10 a 15 litros/minuto. Procurar assistência médica imediatamente, levando o rótulo do produto, sempre que possível.",
+      "pele": "Retirar imediatamente roupas e sapatos contaminados. Lavar a pele com água em abundância, por pelo menos 20 minutos, preferencialmente sob chuveiro de emergência. Procurar assistência médica imediatamente, levando o rótulo, sempre que possível.",
+      "olhos": "Lavar os olhos com água em abundância, por pelo menos 20 minutos, mantendo as pálpebras separadas. Usar de preferência um lavador de olhos. Procurar assistência médica imediatamente, levando o rótulo do produto, sempre que possível.",
+      "ingestao": "Não provocar vômito. Se a vítima estiver consciente, lavar sua boca com água limpa em abundância. Procurar assistência médica imediatamente, levando o rótulo do produto, sempre que possível.",
+      "notasMedico": "O tratamento emergencial, assim como o tratamento médico após superexposição, devem ser direcionados ao controle do quadro completo dos sintomas e das condições clínicas do paciente. Tratamento sintomático. Não há antídotos específicos. Fazer tratamento sintomático e de suporte cardiorrespiratório. No caso de ingestão, lavagem gástrica com solução salina pode ser indicada, assim como o uso de carvão ativado com catártico, no caso de coma ou risco de convulsão. Monitorar glicemia e cetose.\n\nInstruções completas ao médico (hipotensão, hemodiálise, contato com os olhos, lavagem gástrica): ver seção 4 da ficha completa (PDF), páginas 2 e 3.\n\nPrincipais sintomas: pode causar depressão do sistema nervoso central quando inalado ou ingerido em altas concentrações."
     },
-    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
-    "destaque": true,
-    "exemplo": true
+    "composicao": "Substância pura: isopropanol (álcool isopropílico) — CAS 67-63-0."
   },
   {
-    "id": "limpa-contato",
-    "nome": "Limpa contato (spray)",
+    "id": "fluxo-de-solda-alfatec-rma",
+    "nome": "Fluxo de solda pastoso RMA (Alfatec)",
     "sinonimos": [
-      "contact cleaner"
+      "fluxo",
+      "flux",
+      "pasta de fluxo",
+      "Alfatec",
+      "Amtech",
+      "seringa 10cc",
+      "RMA"
     ],
-    "fabricante": "[Fabricante]",
-    "revisao": "2025-01-15",
-    "areas": [
-      "assistencia"
-    ],
-    "pdf": "fichas/pdf/exemplo-fds.pdf",
-    "uso": "Limpeza de conectores e contatos.",
-    "perigos": [
-      "EXEMPLO — perigo da seção 2 da FDS"
-    ],
-    "primeirosSocorros": {
-      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
-    },
-    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
-    "destaque": true,
-    "exemplo": true
-  },
-  {
-    "id": "pasta-termica",
-    "nome": "Pasta térmica",
-    "sinonimos": [
-      "composto térmico"
-    ],
-    "fabricante": "[Fabricante]",
-    "revisao": "2025-01-15",
+    "fabricante": "Alfatec Indústria e Comércio Ltda.",
+    "revisao": "2021-07-15",
     "areas": [
       "assistencia",
       "engenharia"
     ],
-    "pdf": "fichas/pdf/exemplo-fds.pdf",
-    "uso": "Dissipação de calor entre componentes e dissipadores.",
+    "pdf": "fichas/pdf/fluxo-de-solda-alfatec-rma.pdf",
+    "telefoneEmergencia": "(92) 3303-3018",
+    "uso": "Fluxo de solda (Fluxo Alfatec / Amtech pastoso RMA — seringas 10cc).",
     "perigos": [
-      "EXEMPLO — perigo da seção 2 da FDS"
+      "Não classificado como perigoso pelo GHS",
+      "Provoca irritação à pele",
+      "Provoca irritação ocular leve",
+      "Pode provocar irritação das vias respiratórias",
+      "Pode ser tóxico se inalado, ingerido ou absorvido pela pele",
+      "Pode inflamar-se com calor, fagulha ou chamas"
     ],
     "primeirosSocorros": {
-      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+      "inalacao": "Remova a vítima para local ventilado e a mantenha em repouso numa posição que não dificulte a respiração. Caso sinta indisposição, procure um médico. Leve esta FISPQ.",
+      "pele": "Lave a pele exposta com quantidade suficiente de água para remoção do material. Em caso de irritação cutânea, consulte um médico. Leve esta FISPQ.",
+      "olhos": "Enxágue cuidadosamente com água durante vários minutos. No caso de uso de lentes de contato, remova-as, se for fácil. Continue enxaguando. Caso a irritação ocular persista: consulte um médico. Leve esta FISPQ.",
+      "ingestao": "Não induza o vômito. Nunca forneça algo por via oral a uma pessoa inconsciente. Lave a boca da vítima com água em abundância. Caso sinta indisposição, procure um médico. Leve esta FISPQ.",
+      "notasMedico": "Tratamento sintomático.\n\nSintomas e efeitos mais importantes: no trabalho e manuseio deste produto, a aspiração dos vapores ou a ingestão do produto podem causar dores de cabeça, tontura, náuseas, irritação nos olhos e na pele."
     },
-    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
-    "destaque": false,
-    "exemplo": true
+    "composicao": "Mistura.\n• Hidrocarboneto isoparafínico — CAS 68551-15-5 — até 59,5%\n• Resinas modificadas — CAS 8050-09-7 — até 36%\n• Ácido carboxílico — CAS 124-04-9 — até 2,5%\n• Petrolatum — CAS 8009-03-8 — até 2%"
   },
   {
-    "id": "fluxo-de-solda",
-    "nome": "Fluxo de solda",
+    "id": "suvinil-spray-multiverniz-brilhante",
+    "nome": "Suvinil Spray Multiverniz Brilhante (verniz)",
     "sinonimos": [
-      "flux"
+      "verniz",
+      "verniz spray",
+      "multiverniz",
+      "Suvinil",
+      "BASF",
+      "spray"
     ],
-    "fabricante": "[Fabricante]",
-    "revisao": "2025-01-15",
-    "areas": [
-      "engenharia"
-    ],
-    "pdf": "fichas/pdf/exemplo-fds.pdf",
-    "uso": "Auxílio na soldagem de componentes.",
-    "perigos": [
-      "EXEMPLO — perigo da seção 2 da FDS"
-    ],
-    "primeirosSocorros": {
-      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
-    },
-    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
-    "destaque": true,
-    "exemplo": true
-  },
-  {
-    "id": "desengraxante",
-    "nome": "Desengraxante",
-    "sinonimos": [],
-    "fabricante": "[Fabricante]",
-    "revisao": "2025-01-15",
-    "areas": [
-      "assistencia"
-    ],
-    "pdf": "fichas/pdf/exemplo-fds.pdf",
-    "uso": "Remoção de graxa e sujeira pesada.",
-    "perigos": [
-      "EXEMPLO — perigo da seção 2 da FDS"
-    ],
-    "primeirosSocorros": {
-      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
-    },
-    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
-    "destaque": false,
-    "exemplo": true
-  },
-  {
-    "id": "adesivo-instantaneo",
-    "nome": "Adesivo instantâneo",
-    "sinonimos": [
-      "cola instantânea",
-      "cianoacrilato",
-      "super cola"
-    ],
-    "fabricante": "[Fabricante]",
-    "revisao": "2025-01-15",
+    "fabricante": "BASF S.A.",
+    "revisao": "2020-10-29",
     "areas": [
       "assistencia",
       "engenharia"
     ],
-    "pdf": "fichas/pdf/exemplo-fds.pdf",
-    "uso": "Colagem rápida de peças.",
+    "pdf": "fichas/pdf/suvinil-spray-multiverniz-brilhante.pdf",
+    "telefoneEmergencia": "0800 011 2273",
+    "uso": "Aplicações decorativas (pulverizável).",
     "perigos": [
-      "EXEMPLO — perigo da seção 2 da FDS"
+      "Aerossol extremamente inflamável",
+      "Recipiente pressurizado: pode romper se aquecido",
+      "Provoca irritação à pele",
+      "Provoca irritação ocular grave",
+      "Pode provocar irritação das vias respiratórias",
+      "Pode provocar sonolência ou vertigem",
+      "Pode provocar danos aos órgãos por exposição repetida ou prolongada",
+      "Nocivo para os organismos aquáticos"
     ],
     "primeirosSocorros": {
-      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+      "geral": "O socorrista deverá cuidar da sua própria segurança. Em caso de perigo de desmaio, deitar e transportar em posição lateral estável. Retirar a pessoa atingida da zona de perigo. Retirar imediatamente a roupa contaminada. Em caso de dúvida, ou quando os sintomas persistirem, procurar um médico. Nunca dê nada por via oral a uma pessoa inconsciente.",
+      "inalacao": "Remover a pessoa para um local fresco e mantê-la calma. Se o sintoma persistir, consultar um médico. Caso a respiração esteja irregular ou parada, efetuar respiração artificial.",
+      "pele": "Se o sintoma persistir, consultar um médico. Remover as roupas contaminadas. Lavar a pele com sabão e água e enxaguar com bastante água. Não utilizar solventes ou diluentes.",
+      "olhos": "Retirar lentes de contato, se presentes. Enxaguar imediatamente os olhos com água corrente durante pelo menos 15 minutos, mantendo as pálpebras bem abertas. Consultar um oftalmologista. Procurar assistência médica imediatamente.",
+      "ingestao": "Não induzir o vômito. Enxaguar a boca cuidadosamente com água, procurar atendimento médico. No caso de persistirem os sintomas, consultar um médico.",
+      "notasMedico": "Tratamento: tratamento sintomático (descontaminação, funções vitais).\nAntídoto: não se conhece nenhum antídoto específico.\nSintomas: ver frases de perigo (seção 2) e avaliações toxicológicas (seção 11) da ficha completa."
     },
-    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
-    "destaque": false,
-    "exemplo": true
+    "composicao": "Mistura: poliestireno, solvente orgânico.\nIngredientes perigosos:\n• Acetona — CAS 67-64-1 — 20 a 25%\n• Butano (propelente) — CAS 106-97-8 — 15 a 20%\n• Xileno — CAS 1330-20-7 — 10 a 12,5%\n• Solvente de nafta (petróleo), aromática leve — CAS 64742-95-6 — 5 a 7%\n• 1,2,4-trimetilbenzeno — CAS 95-63-6 — 3 a 5%\n• Etilbenzeno — CAS 100-41-4 — 1 a 2%\n• Mesitileno — CAS 108-67-8 — 1 a 2%"
   },
   {
-    "id": "graxa-de-silicone",
-    "nome": "Graxa de silicone",
-    "sinonimos": [],
-    "fabricante": "[Fabricante]",
-    "revisao": "2025-01-15",
+    "id": "suvinil-spray-sua-arte-fosco-branco",
+    "nome": "Suvinil Spray Sua Arte Fosco Branco (multiuso)",
+    "sinonimos": [
+      "tinta spray",
+      "spray branco",
+      "tinta branca",
+      "Sua Arte",
+      "Suvinil",
+      "BASF",
+      "spray"
+    ],
+    "fabricante": "BASF S.A.",
+    "revisao": "2020-10-29",
     "areas": [
+      "assistencia",
       "engenharia"
     ],
-    "pdf": "fichas/pdf/exemplo-fds.pdf",
-    "uso": "Lubrificação e vedação de peças.",
+    "pdf": "fichas/pdf/suvinil-spray-sua-arte-fosco-branco.pdf",
+    "telefoneEmergencia": "0800 011 2273",
+    "uso": "Aplicações decorativas (pulverizável).",
     "perigos": [
-      "EXEMPLO — perigo da seção 2 da FDS"
+      "Aerossol extremamente inflamável",
+      "Recipiente pressurizado: pode romper se aquecido",
+      "Provoca irritação à pele",
+      "Provoca irritação ocular grave",
+      "Pode provocar irritação das vias respiratórias",
+      "Pode provocar sonolência ou vertigem",
+      "Tóxico para os organismos aquáticos"
     ],
     "primeirosSocorros": {
-      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+      "geral": "O socorrista deverá cuidar da sua própria segurança. Em caso de perigo de desmaio, deitar e transportar em posição lateral estável. Retirar a pessoa atingida da zona de perigo. Retirar imediatamente a roupa contaminada. Em caso de dúvida, ou quando os sintomas persistirem, procurar um médico. Nunca dê nada por via oral a uma pessoa inconsciente.",
+      "inalacao": "Remover a pessoa para um local fresco e mantê-la calma. Se o sintoma persistir, consultar um médico. Caso a respiração esteja irregular ou parada, efetuar respiração artificial.",
+      "pele": "Se o sintoma persistir, consultar um médico. Remover as roupas contaminadas. Lavar a pele com sabão e água e enxaguar com bastante água. Não utilizar solventes ou diluentes.",
+      "olhos": "Retirar lentes de contato, se presentes. Enxaguar imediatamente os olhos com água corrente durante pelo menos 15 minutos, mantendo as pálpebras bem abertas. Consultar um oftalmologista. Procurar assistência médica imediatamente.",
+      "ingestao": "Não induzir o vômito. Enxaguar a boca cuidadosamente com água, procurar atendimento médico. No caso de persistirem os sintomas, consultar um médico.",
+      "notasMedico": "Tratamento: tratamento sintomático (descontaminação, funções vitais).\nAntídoto: não se conhece nenhum antídoto específico.\nSintomas: ver frases de perigo (seção 2) e avaliações toxicológicas (seção 11) da ficha completa."
     },
-    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
-    "destaque": false,
-    "exemplo": true
-  },
-  {
-    "id": "ar-comprimido",
-    "nome": "Ar comprimido (spray)",
-    "sinonimos": [
-      "espanador de ar",
-      "air duster"
-    ],
-    "fabricante": "[Fabricante]",
-    "revisao": "2025-01-15",
-    "areas": [
-      "assistencia"
-    ],
-    "pdf": "fichas/pdf/exemplo-fds.pdf",
-    "uso": "Remoção de poeira de equipamentos.",
-    "perigos": [
-      "EXEMPLO — perigo da seção 2 da FDS"
-    ],
-    "primeirosSocorros": {
-      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
-      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
-    },
-    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
-    "destaque": false,
-    "exemplo": true
+    "composicao": "Mistura: poliestireno, solvente orgânico, pigmento.\nIngredientes perigosos:\n• Solvente de nafta (petróleo), aromática leve — CAS 64742-95-6 — 15 a 20%\n• Acetona — CAS 67-64-1 — 12,5 a 15%\n• Butano (propelente) — CAS 106-97-8 — 10 a 12,5%\n• Dióxido de titânio — CAS 13463-67-7 — 10 a 12,5%\n• 1,2,4-trimetilbenzeno — CAS 95-63-6 — 7 a 10%\n• Mesitileno — CAS 108-67-8 — 3 a 5%\n• Propilbenzeno — CAS 103-65-1 — 2,5 a 3%\n• Cumeno — CAS 98-82-8 — 1 a 2%\n• Sal do ácido fosfórico — CAS 85711-34-8 — 0,1 a 0,2%\n• Cyclohexyldimethylammonium dihydrogen phosphate — 0,1 a 0,2%"
   }
 ]

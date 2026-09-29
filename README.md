@@ -55,7 +55,7 @@ escondidas (testado de 280 px — Galaxy Fold — até tablets, em pé e deitado
 
 ## Cadastrar as fichas reais
 
-As fichas de exemplo (marcadas com `"exemplo": true`) mostram um aviso amarelo no app.
+Já cadastradas: álcool gel 70°, álcool isopropílico, fluxo de solda RMA (Alfatec) e os sprays Suvinil (fosco branco e multiverniz). Fichas marcadas com `"exemplo": true` mostram um aviso amarelo no app.
 Para colocar as reais:
 
 1. Copie os PDFs para as pastas da área correspondente:
