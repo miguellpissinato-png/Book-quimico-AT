@@ -1,10 +1,11 @@
-# Publica o app no GitHub Pages a cada push na branch main.
-# Ative em: Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# Publica o app no GitHub Pages (alternativa ao Netlify).
+# Só roda manualmente (aba Actions → "Publicar no GitHub Pages" → Run workflow), porque o
+# GitHub Pages exige plano pago para repositório privado.
+# Para usar: Settings → Pages → Build and deployment → Source: "GitHub Actions" e, se quiser
+# publicar a cada push, acrescente abaixo:  push: { branches: [main] }
 name: Publicar no GitHub Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

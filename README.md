@@ -121,7 +121,8 @@ O app é só um conjunto de arquivos estáticos, então pode ser hospedado de gr
 
 **GitHub Pages** (repositório público, ou privado em plano pago do GitHub)
 1. No GitHub: *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
-2. Faça merge na branch `main`. O workflow `.github/workflows/deploy.yml` testa, gera e publica.
+2. Aba *Actions → Publicar no GitHub Pages → Run workflow* (o workflow
+   `.github/workflows/deploy.yml` testa, gera e publica; roda só manualmente).
 3. O endereço fica `https://<usuario>.github.io/Book-quimico-AT/`.
 
 **Netlify / Cloudflare Pages** (funcionam com repositório privado no plano gratuito)
