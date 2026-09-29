@@ -121,6 +121,8 @@ O app é só um conjunto de arquivos estáticos, então pode ser hospedado de gr
 
 **GitHub Pages** (repositório público — é o que usamos)
 1. No GitHub: *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
+   ⚠️ **Não** use "Deploy from a branch": nesse modo o GitHub publica os arquivos-fonte e o
+   site fica em tela branca (o workflow acusa esse erro e para).
 2. A cada mudança na branch `main`, o workflow `.github/workflows/deploy.yml` testa, gera e
    publica sozinho (acompanhe na aba *Actions*). Também dá para rodar manualmente em
    *Actions → Publicar no GitHub Pages → Run workflow*.
