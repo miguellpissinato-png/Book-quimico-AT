@@ -52,3 +52,14 @@ describe('cadastro das fichas (src/data/produtos.json)', () => {
     }
   });
 });
+
+describe('nome do PDF baixado', async () => {
+  const { nomeArquivo } = await import('../src/lib/fichas');
+  it('não tem acentos nem símbolos (navegadores trocam o nome por "download")', () => {
+    for (const p of produtos) {
+      const nome = nomeArquivo(p);
+      expect(nome, p.id).toMatch(/^FDS - [A-Za-z0-9 ()\-.,]+\.pdf$/);
+    }
+    expect(nomeArquivo({ id: 'x', nome: 'Álcool gel 70° INPM' })).toBe('FDS - Alcool gel 70 INPM.pdf');
+  });
+});

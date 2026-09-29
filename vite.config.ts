@@ -38,6 +38,10 @@ export default defineConfig({
         // App (telas, dados das fichas, fontes, fotos) fica 100% disponível sem internet.
         globPatterns: ['**/*.{js,css,html,woff2,png,jpg,jpeg,webp,svg}'],
         navigateFallback: 'index.html',
+        // Abrir/baixar um PDF é uma "navegação" do navegador: sem esta exceção o service
+        // worker devolvia a tela do app no lugar do documento. PDFs e fotos seguem a regra
+        // de cache própria (runtimeCaching abaixo), inclusive sem internet.
+        navigateFallbackDenylist: [/\/fichas\//],
         cleanupOutdatedCaches: true,
         runtimeCaching: [
           {

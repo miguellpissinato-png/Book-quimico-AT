@@ -7,9 +7,18 @@ export function urlPdf(p: Produto): string | undefined {
   return p.pdf ? new URL(urlPublica(p.pdf), window.location.href).href : undefined;
 }
 
-/** Nome sugerido ao salvar o PDF no celular. */
+/**
+ * Nome sugerido ao salvar o PDF no celular. Sem acentos e símbolos (ex.: "°"): alguns
+ * navegadores descartam o nome inteiro e salvam como "download" se houver um deles.
+ */
 export function nomeArquivo(p: Produto): string {
-  return `FDS - ${p.nome.replace(/[\\/:*?"<>|]/g, '')}.pdf`;
+  const nome = p.nome
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^A-Za-z0-9 ()\-.,]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return `FDS - ${nome}.pdf`;
 }
 
 export type ResultadoEnvio = 'arquivo' | 'link' | 'copiado' | 'cancelado';
