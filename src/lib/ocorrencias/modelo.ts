@@ -71,7 +71,7 @@ export type Ocorrencia = {
 
 export type CamposEditaveis = Pick<
   Ocorrencia,
-  'responsavel' | 'local' | 'area' | 'exposicao' | 'pessoaAtendida' | 'descricao' | 'encaminhamento' | 'status'
+  'produtos' | 'responsavel' | 'local' | 'area' | 'exposicao' | 'pessoaAtendida' | 'descricao' | 'encaminhamento' | 'status'
 >;
 
 export function novaOcorrencia(id: string, agora: string, dispositivo = ''): Ocorrencia {

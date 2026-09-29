@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Cabecalho, Rolagem } from '../components/Estrutura';
 import { Icone } from '../components/Icone';
-import { PRODUTOS } from '../data/produtos';
+import { ordemAlfabetica, PRODUTOS, semAcento } from '../data/produtos';
 import { avisar } from '../lib/aviso';
 import {
   AREAS,
@@ -17,6 +17,10 @@ import { atualizar, useOcorrencias } from '../lib/ocorrencias/store';
 import { navegar, voltar } from '../lib/router';
 
 type Form = Omit<CamposEditaveis, 'status'>;
+
+const OUTRO = '__outro';
+const produtosOrdenados = [...PRODUTOS].sort(ordemAlfabetica);
+const idsCadastrados = new Set(PRODUTOS.map((p) => p.id));
 
 export function RegistroDetalhe({ id }: { id: string }) {
   const { itens } = useOcorrencias();
@@ -42,6 +46,7 @@ function Formulario({ id }: { id: string }) {
   const { itens } = useOcorrencias();
   const o = itens.find((x) => x.id === id)!;
   const [form, setForm] = useState<Form>(() => ({
+    produtos: o.produtos,
     responsavel: o.responsavel,
     local: o.local,
     area: o.area,
@@ -70,10 +75,35 @@ function Formulario({ id }: { id: string }) {
     timer.current = setTimeout(gravarAgora, 600);
   };
 
+  const [digitandoOutro, setDigitandoOutro] = useState(false);
+  const [nomeOutro, setNomeOutro] = useState('');
+
+  const adicionarProduto = (produtoId: string) => {
+    if (produtoId === OUTRO) return setDigitandoOutro(true);
+    const p = PRODUTOS.find((x) => x.id === produtoId);
+    if (p && !form.produtos.some((x) => x.id === p.id)) mudar('produtos', [...form.produtos, { id: p.id, nome: p.nome }]);
+  };
+  const adicionarOutro = () => {
+    const nome = nomeOutro.trim();
+    if (!nome) return;
+    const idOutro = 'outro-' + semAcento(nome).replace(/[^a-z0-9]+/g, '-');
+    if (!form.produtos.some((x) => x.id === idOutro)) mudar('produtos', [...form.produtos, { id: idOutro, nome }]);
+    setNomeOutro('');
+    setDigitandoOutro(false);
+  };
+  const removerProduto = (produtoId: string) =>
+    mudar(
+      'produtos',
+      form.produtos.filter((x) => x.id !== produtoId),
+    );
+
   const alternarExposicao = (e: Exposicao) =>
     mudar('exposicao', form.exposicao.includes(e) ? form.exposicao.filter((x) => x !== e) : [...form.exposicao, e]);
 
   const mudarStatus = (status: CamposEditaveis['status']) => {
+    if (status === 'concluida' && form.produtos.length === 0) {
+      if (!window.confirm('Nenhum produto foi informado. Concluir o registro mesmo assim?')) return;
+    }
     gravarAgora();
     atualizar(id, { status });
     if (status === 'concluida') {
@@ -85,8 +115,6 @@ function Formulario({ id }: { id: string }) {
     }
   };
 
-  const idsProdutos = new Set(PRODUTOS.map((p) => p.id));
-
   return (
     <div className="tela">
       <Cabecalho titulo="Ocorrência" subtitulo={formatarDataHora(o.criadoEm)} />
@@ -96,18 +124,6 @@ function Formulario({ id }: { id: string }) {
             <span className={`etiqueta ${o.status === 'aberta' ? 'vermelha' : o.status === 'concluida' ? 'verde' : 'cinza'}`}>
               {ROTULO_STATUS[o.status]}
             </span>
-            {o.produtos.map((p) =>
-              idsProdutos.has(p.id) ? (
-                <a key={p.id} className="etiqueta" href={`#/produto/${encodeURIComponent(p.id)}`}>
-                  <Icone nome="documento" tamanho={12} />
-                  {p.nome}
-                </a>
-              ) : (
-                <span key={p.id} className="etiqueta">
-                  {p.nome}
-                </span>
-              ),
-            )}
           </div>
 
           <section className="cartao" aria-labelledby="t-acoes">
@@ -132,6 +148,61 @@ function Formulario({ id }: { id: string }) {
             <h2 id="t-detalhes" className="cartao-titulo">
               Detalhes da ocorrência
             </h2>
+
+            <div className="campo">
+              <label htmlFor="f-produto">Produto envolvido</label>
+              {form.produtos.length > 0 && (
+                <ul className="produtos-escolhidos">
+                  {form.produtos.map((p) => (
+                    <li key={p.id}>
+                      {idsCadastrados.has(p.id) ? (
+                        <a href={`#/produto/${encodeURIComponent(p.id)}`}>
+                          <Icone nome="documento" tamanho={16} />
+                          {p.nome}
+                        </a>
+                      ) : (
+                        <span>{p.nome}</span>
+                      )}
+                      <button type="button" aria-label={`Remover ${p.nome}`} onClick={() => removerProduto(p.id)}>
+                        <Icone nome="fechar" tamanho={16} />
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <select id="f-produto" value="" onChange={(e) => adicionarProduto(e.target.value)}>
+                <option value="">{form.produtos.length ? 'Adicionar outro produto…' : 'Selecione o produto…'}</option>
+                {produtosOrdenados
+                  .filter((p) => !form.produtos.some((x) => x.id === p.id))
+                  .map((p) => (
+                    <option key={p.id} value={p.id}>
+                      {p.nome}
+                    </option>
+                  ))}
+                <option value={OUTRO}>Outro (não está na lista)…</option>
+              </select>
+              {digitandoOutro && (
+                <div className="linha-outro">
+                  <input
+                    aria-label="Nome do produto"
+                    value={nomeOutro}
+                    onChange={(e) => setNomeOutro(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        e.preventDefault();
+                        adicionarOutro();
+                      }
+                    }}
+                    enterKeyHint="done"
+                    placeholder="Nome do produto"
+                    autoFocus
+                  />
+                  <button type="button" className="botao" onClick={adicionarOutro}>
+                    Adicionar
+                  </button>
+                </div>
+              )}
+            </div>
 
             <div className="campo">
               <label htmlFor="f-responsavel">Quem está registrando</label>
