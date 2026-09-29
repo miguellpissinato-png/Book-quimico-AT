@@ -1,0 +1,221 @@
+[
+  {
+    "id": "alcool-isopropilico",
+    "nome": "Álcool isopropílico",
+    "sinonimos": [
+      "IPA",
+      "isopropanol"
+    ],
+    "fabricante": "[Fabricante]",
+    "revisao": "2025-01-15",
+    "areas": [
+      "assistencia",
+      "engenharia"
+    ],
+    "pdf": "fichas/pdf/exemplo-fds.pdf",
+    "uso": "Limpeza de placas e contatos elétricos.",
+    "perigos": [
+      "EXEMPLO — perigo da seção 2 da FDS"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+    },
+    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
+    "destaque": true,
+    "exemplo": true
+  },
+  {
+    "id": "limpa-contato",
+    "nome": "Limpa contato (spray)",
+    "sinonimos": [
+      "contact cleaner"
+    ],
+    "fabricante": "[Fabricante]",
+    "revisao": "2025-01-15",
+    "areas": [
+      "assistencia"
+    ],
+    "pdf": "fichas/pdf/exemplo-fds.pdf",
+    "uso": "Limpeza de conectores e contatos.",
+    "perigos": [
+      "EXEMPLO — perigo da seção 2 da FDS"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+    },
+    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
+    "destaque": true,
+    "exemplo": true
+  },
+  {
+    "id": "pasta-termica",
+    "nome": "Pasta térmica",
+    "sinonimos": [
+      "composto térmico"
+    ],
+    "fabricante": "[Fabricante]",
+    "revisao": "2025-01-15",
+    "areas": [
+      "assistencia",
+      "engenharia"
+    ],
+    "pdf": "fichas/pdf/exemplo-fds.pdf",
+    "uso": "Dissipação de calor entre componentes e dissipadores.",
+    "perigos": [
+      "EXEMPLO — perigo da seção 2 da FDS"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+    },
+    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
+    "destaque": false,
+    "exemplo": true
+  },
+  {
+    "id": "fluxo-de-solda",
+    "nome": "Fluxo de solda",
+    "sinonimos": [
+      "flux"
+    ],
+    "fabricante": "[Fabricante]",
+    "revisao": "2025-01-15",
+    "areas": [
+      "engenharia"
+    ],
+    "pdf": "fichas/pdf/exemplo-fds.pdf",
+    "uso": "Auxílio na soldagem de componentes.",
+    "perigos": [
+      "EXEMPLO — perigo da seção 2 da FDS"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+    },
+    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
+    "destaque": true,
+    "exemplo": true
+  },
+  {
+    "id": "desengraxante",
+    "nome": "Desengraxante",
+    "sinonimos": [],
+    "fabricante": "[Fabricante]",
+    "revisao": "2025-01-15",
+    "areas": [
+      "assistencia"
+    ],
+    "pdf": "fichas/pdf/exemplo-fds.pdf",
+    "uso": "Remoção de graxa e sujeira pesada.",
+    "perigos": [
+      "EXEMPLO — perigo da seção 2 da FDS"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+    },
+    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
+    "destaque": false,
+    "exemplo": true
+  },
+  {
+    "id": "adesivo-instantaneo",
+    "nome": "Adesivo instantâneo",
+    "sinonimos": [
+      "cola instantânea",
+      "cianoacrilato",
+      "super cola"
+    ],
+    "fabricante": "[Fabricante]",
+    "revisao": "2025-01-15",
+    "areas": [
+      "assistencia",
+      "engenharia"
+    ],
+    "pdf": "fichas/pdf/exemplo-fds.pdf",
+    "uso": "Colagem rápida de peças.",
+    "perigos": [
+      "EXEMPLO — perigo da seção 2 da FDS"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+    },
+    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
+    "destaque": false,
+    "exemplo": true
+  },
+  {
+    "id": "graxa-de-silicone",
+    "nome": "Graxa de silicone",
+    "sinonimos": [],
+    "fabricante": "[Fabricante]",
+    "revisao": "2025-01-15",
+    "areas": [
+      "engenharia"
+    ],
+    "pdf": "fichas/pdf/exemplo-fds.pdf",
+    "uso": "Lubrificação e vedação de peças.",
+    "perigos": [
+      "EXEMPLO — perigo da seção 2 da FDS"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+    },
+    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
+    "destaque": false,
+    "exemplo": true
+  },
+  {
+    "id": "ar-comprimido",
+    "nome": "Ar comprimido (spray)",
+    "sinonimos": [
+      "espanador de ar",
+      "air duster"
+    ],
+    "fabricante": "[Fabricante]",
+    "revisao": "2025-01-15",
+    "areas": [
+      "assistencia"
+    ],
+    "pdf": "fichas/pdf/exemplo-fds.pdf",
+    "uso": "Remoção de poeira de equipamentos.",
+    "perigos": [
+      "EXEMPLO — perigo da seção 2 da FDS"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "pele": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "olhos": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "ingestao": "EXEMPLO — copie aqui o resumo da seção 4 da FDS.",
+      "notasMedico": "EXEMPLO — notas para o médico (seção 4 da FDS), se houver."
+    },
+    "composicao": "EXEMPLO — principais componentes e nº CAS (seção 3 da FDS).",
+    "destaque": false,
+    "exemplo": true
+  }
+]

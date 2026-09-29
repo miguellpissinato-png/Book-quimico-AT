@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <!--
+      viewport-fit=cover: usa a tela inteira em celulares com notch / barra de gestos
+      (as áreas seguras são tratadas no CSS com env(safe-area-inset-*)).
+      interactive-widget=resizes-content: no Android, o teclado redimensiona o app
+      em vez de cobrir o conteúdo.
+    -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta name="theme-color" content="#002855" />
+    <meta name="description" content="Fichas de segurança (FDS) dos produtos químicos — Assistência Técnica e Engenharia." />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Book Químico" />
+    <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <title>Book Químico — Elsys</title>
+    <script>
+      // Ajuste de altura antes do primeiro desenho da tela (evita "pulo" no carregamento).
+      document.documentElement.style.setProperty('--app-height', window.innerHeight + 'px');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Este aplicativo precisa de JavaScript. Em emergência ligue SAMU 192 ou Disque-Intoxicação 0800 722 6001.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
