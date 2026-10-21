@@ -206,18 +206,22 @@
   },
   {
     "id": "thinner-it-16",
-    "nome": "Thinner IT 16 (Nova Era)",
+    "nome": "Thinner IT 16 (Itaquá)",
     "sinonimos": [
       "thinner",
       "IT16",
       "IT 16",
+      "Itaquá",
+      "Itaqua",
+      "thinner multiuso",
       "diluente",
       "solvente",
       "Nova Era"
     ],
-    "fabricante": "Nova Era Indústria e Comércio Ltda",
+    "fabricante": "Nova Era Indústria e Comércio Ltda (marca Itaquá)",
     "revisao": "06/2024",
     "pdf": "fichas/pdf/thinner-it-16.pdf",
+    "foto": "fichas/fotos/thinner-it-16.jpg",
     "telefoneEmergencia": "(11) 2500-2992",
     "uso": "Limpeza em geral (esmaltes não emulsionados, primers, sintéticos etc.).",
     "perigos": [
