@@ -266,25 +266,28 @@
     "composicao": "Mistura.\n• Destilados de petróleo levemente tratados com hidrogênio — CAS 64742-47-8 — 30 a 40%\n• Butano — CAS 106-97-8 — 20 a 30%\n• Propano — CAS 74-98-6 — 5 a 10%"
   },
   {
-    "id": "oleo-silicone-ak100-generica",
-    "nome": "Óleo de silicone (rótulo em chinês) · FDS genérica",
+    "id": "pasta-termica-silicone-ak100",
+    "nome": "Pasta térmica de silicone AK-100 · FDS genérica",
     "sinonimos": [
-      "silicone",
-      "fluido de silicone",
-      "óleo de silicone",
+      "pasta térmica",
+      "pasta de silicone",
+      "heat sink paste",
+      "silicone heat sink",
+      "dissipador",
+      "AK-100",
       "AK100",
-      "AK 100",
-      "polidimetilsiloxano",
-      "PDMS",
-      "Wacker",
+      "silicone",
+      "耕暉",
+      "Taiwan",
       "chinês",
       "mandarim"
     ],
-    "fabricante": "Rótulo em chinês, sem fabricante identificado · FDS de referência: Wacker Chemie AG (AK 100)",
+    "fabricante": "耕暉股份有限公司 (Taipé, Taiwan) · FDS de referência: Wacker Chemie AG (AK 100)",
     "revisao": "2023-06-29",
-    "pdf": "fichas/pdf/oleo-silicone-ak100-generica.pdf",
-    "uso": "Fluido de silicone (polidimetilsiloxano). Uso industrial.",
-    "aviso": "Ficha genérica de referência, em inglês. O produto da AT tem rótulo só em chinês e não tem FDS própria; esta é a FDS do fluido de silicone AK 100 (Wacker), e os primeiros socorros abaixo foram traduzidos dela. A ficha não tem telefone de emergência no Brasil: use o SAMU (192) ou o Disque-Intoxicação. Leve a embalagem ao médico.",
+    "pdf": "fichas/pdf/pasta-termica-ak100-fds-generica.pdf",
+    "foto": "fichas/fotos/pasta-termica-silicone-ak100.jpg",
+    "uso": "Pasta térmica para dissipadores de calor.",
+    "aviso": "Ficha genérica de referência, em inglês. O produto da AT é a pasta térmica AK-100 de uma empresa de Taiwan (rótulo em chinês), sem FDS própria. Esta é a FDS do fluido de silicone AK 100 (Wacker), que corresponde só à base de silicone da pasta: as cargas minerais da pasta não estão cobertas. Os primeiros socorros abaixo foram traduzidos dela. A ficha não tem telefone de emergência no Brasil: use o SAMU (192) ou o Disque-Intoxicação. Leve a embalagem ao médico.",
     "perigos": [
       "Não classificado como perigoso (GHS)",
       "Derramamentos deixam o piso muito escorregadio"
@@ -297,6 +300,6 @@
       "ingestao": "Nenhuma medida especial é necessária após a ingestão.",
       "notasMedico": "A FDS não traz notas específicas para o médico.\n\nToxicologia (seção 11): toxicidade aguda oral DL50 > 5000 mg/kg e dérmica DL50 > 2008 mg/kg, sem mortalidade nem sinais clínicos de toxicidade nas doses testadas. Não irrita a pele nem os olhos e não é sensibilizante."
     },
-    "composicao": "Substância.\n• Polidimetilsiloxano (óleo de silicone) — nº CAS não informado na FDS"
+    "composicao": "Composição exata da pasta desconhecida.\n• Base: polidimetilsiloxano (óleo de silicone), o produto coberto pela FDS de referência — nº CAS não informado\n• Pastas térmicas de silicone costumam conter também cargas minerais, como óxido de zinco (não informado no rótulo)"
   }
 ]
