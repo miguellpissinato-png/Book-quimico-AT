@@ -264,5 +264,39 @@
       "notasMedico": "Evite contato com o produto ao socorrer a vítima. Se necessário, o tratamento sintomático deve compreender, sobretudo, medidas de suporte como correção de distúrbios hidroeletrolíticos, metabólicos, além de assistência respiratória. Em caso de contato com a pele não friccione o local atingido.\n\nSintomas mais importantes: pode ser fatal se ingerido e penetrar nas vias respiratórias."
     },
     "composicao": "Mistura.\n• Destilados de petróleo levemente tratados com hidrogênio — CAS 64742-47-8 — 30 a 40%\n• Butano — CAS 106-97-8 — 20 a 30%\n• Propano — CAS 74-98-6 — 5 a 10%"
+  },
+  {
+    "id": "oleo-silicone-ak100-generica",
+    "nome": "Óleo de silicone (rótulo em chinês) · FDS genérica",
+    "sinonimos": [
+      "silicone",
+      "fluido de silicone",
+      "óleo de silicone",
+      "AK100",
+      "AK 100",
+      "polidimetilsiloxano",
+      "PDMS",
+      "Wacker",
+      "chinês",
+      "mandarim"
+    ],
+    "fabricante": "Rótulo em chinês, sem fabricante identificado · FDS de referência: Wacker Chemie AG (AK 100)",
+    "revisao": "2023-06-29",
+    "pdf": "fichas/pdf/oleo-silicone-ak100-generica.pdf",
+    "uso": "Fluido de silicone (polidimetilsiloxano). Uso industrial.",
+    "aviso": "Ficha genérica de referência, em inglês. O produto da AT tem rótulo só em chinês e não tem FDS própria; esta é a FDS do fluido de silicone AK 100 (Wacker), e os primeiros socorros abaixo foram traduzidos dela. A ficha não tem telefone de emergência no Brasil: use o SAMU (192) ou o Disque-Intoxicação. Leve a embalagem ao médico.",
+    "perigos": [
+      "Não classificado como perigoso (GHS)",
+      "Derramamentos deixam o piso muito escorregadio"
+    ],
+    "primeirosSocorros": {
+      "geral": "Procure atendimento médico se ocorrer irritação ou outros sintomas. Antes de procurar atendimento, retire roupas e sapatos contaminados. Leve uma cópia da FDS ao atendimento médico.",
+      "inalacao": "Nas condições normais, o material não pode ser inalado. Não é necessário tratamento especial.",
+      "pele": "Após o contato com a pele, remova o excesso com pano ou papel. Use um limpador de mãos sem água para remover o máximo possível do material restante. Lave com água e sabão.",
+      "olhos": "Em caso de contato com os olhos, mantenha imediatamente as pálpebras abertas e lave com bastante água por pelo menos 15 minutos.",
+      "ingestao": "Nenhuma medida especial é necessária após a ingestão.",
+      "notasMedico": "A FDS não traz notas específicas para o médico.\n\nToxicologia (seção 11): toxicidade aguda oral DL50 > 5000 mg/kg e dérmica DL50 > 2008 mg/kg, sem mortalidade nem sinais clínicos de toxicidade nas doses testadas. Não irrita a pele nem os olhos e não é sensibilizante."
+    },
+    "composicao": "Substância.\n• Polidimetilsiloxano (óleo de silicone) — nº CAS não informado na FDS"
   }
 ]
