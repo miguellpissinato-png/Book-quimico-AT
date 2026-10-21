@@ -104,6 +104,12 @@ export function Produto({ id, origem }: { id: string; origem: 'emergencia' | 'do
             </div>
           )}
 
+          {p.aviso && (
+            <div className="faixa-aviso exemplo" role="note">
+              <strong>Atenção:</strong> {p.aviso}
+            </div>
+          )}
+
           <div className="faixa-aviso">
             <strong>Mostre esta tela ou a ficha completa ao médico.</strong> Se possível, leve também a embalagem do
             produto.

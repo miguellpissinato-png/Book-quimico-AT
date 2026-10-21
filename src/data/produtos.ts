@@ -37,6 +37,8 @@ export type Produto = {
   destaque?: boolean;
   /** Marca a ficha como dado de exemplo: o app exibe um aviso amarelo. */
   exemplo?: boolean;
+  /** Aviso em destaque na ficha (ex.: FDS genérica usada no lugar da específica). */
+  aviso?: string;
 };
 
 export const PRODUTOS: Produto[] = dados as Produto[];

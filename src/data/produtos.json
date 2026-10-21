@@ -166,5 +166,38 @@
       "notasMedico": "Tratamento: tratamento sintomático (descontaminação, funções vitais).\nAntídoto: não se conhece nenhum antídoto específico.\nSintomas: ver frases de perigo (seção 2) e avaliações toxicológicas (seção 11) da ficha completa."
     },
     "composicao": "Mistura: poliestireno, solvente orgânico, pigmento.\nIngredientes perigosos:\n• Solvente de nafta (petróleo), aromática leve — CAS 64742-95-6 — 15 a 20%\n• Acetona — CAS 67-64-1 — 12,5 a 15%\n• Butano (propelente) — CAS 106-97-8 — 10 a 12,5%\n• Dióxido de titânio — CAS 13463-67-7 — 10 a 12,5%\n• 1,2,4-trimetilbenzeno — CAS 95-63-6 — 7 a 10%\n• Mesitileno — CAS 108-67-8 — 3 a 5%\n• Propilbenzeno — CAS 103-65-1 — 2,5 a 3%\n• Cumeno — CAS 98-82-8 — 1 a 2%\n• Sal do ácido fosfórico — CAS 85711-34-8 — 0,1 a 0,2%\n• Cyclohexyldimethylammonium dihydrogen phosphate — 0,1 a 0,2%"
+  },
+  {
+    "id": "oleo-bomba-vacuo-eos-vpo-46",
+    "nome": "Óleo para bomba de vácuo VPO-46 (EOS) · FDS genérica",
+    "sinonimos": [
+      "óleo de vácuo",
+      "óleo bomba de vácuo",
+      "óleo lubrificante",
+      "VPO-46",
+      "VPO 46",
+      "ISO VG 46",
+      "EOS",
+      "TIPI",
+      "óleo genérico"
+    ],
+    "fabricante": "EOS (produto em uso) · FDS de referência: Refrigeração TIPI Ltda",
+    "revisao": "01/2025",
+    "pdf": "fichas/pdf/oleo-bomba-vacuo-eos-vpo-46.pdf",
+    "telefoneEmergencia": "(67) 2107-6245",
+    "uso": "Óleo lubrificante para bombas de vácuo.",
+    "aviso": "Ficha genérica de referência. O óleo em uso é o VPO-46 da EOS, que informou não ter a FDS específica deste modelo. Esta FDS é de um óleo ISO VG 46 equivalente, da Refrigeração TIPI, e o telefone de emergência abaixo é da TIPI. Leve também a embalagem ao médico.",
+    "perigos": [
+      "Não classificado como perigoso (GHS)",
+      "A injeção de alta pressão sob a pele pode causar sérios danos",
+      "A exposição excessiva pode resultar em danos aos olhos, pele ou irritação respiratória"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "Remova o produto imediatamente para evitar maior exposição. Para aqueles dando assistência, evite se expor e que os outros se exponham. Use proteção respiratória adequada. Se ocorrer irritação no aparelho respiratório, tontura, náusea, ou inconsciência, busque assistência médica imediatamente. Se ocorrer parada na respiração, aplique ventilação com um dispositivo mecânico ou use respiração boca a boca.",
+      "pele": "Lave as áreas de contato com água e sabão. Se o produto for injetado para dentro ou debaixo da pele, ou para dentro de qualquer parte do corpo, sem se importar com a aparência da ferida ou com o seu tamanho, o indivíduo deve ser avaliado imediatamente por um médico como um caso de emergência cirúrgica. Mesmo que os sintomas iniciais da injeção com alta pressão sejam mínimos ou ausentes, uma cirurgia cedo, dentro das primeiras horas, pode reduzir muito a extensão do dano.",
+      "olhos": "Lave muito bem com água. Se irritação ocorrer, procure assistência médica.",
+      "ingestao": "Normalmente, os primeiros socorros não são necessários. Procure assistência médica se ocorrer algum desconforto."
+    },
+    "composicao": "Mistura.\n• Destilados (petróleo), parafínicos pesados hidrotratados — CAS 64742-57-7 — concentração não disponível\n• 2,6-di-terc-butil-p-cresol — CAS 128-37-0 — concentração não disponível"
   }
 ]
