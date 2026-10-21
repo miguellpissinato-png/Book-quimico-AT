@@ -199,5 +199,39 @@
       "ingestao": "Normalmente, os primeiros socorros não são necessários. Procure assistência médica se ocorrer algum desconforto."
     },
     "composicao": "Mistura.\n• Destilados (petróleo), parafínicos pesados hidrotratados — CAS 64742-57-7 — concentração não disponível\n• 2,6-di-terc-butil-p-cresol — CAS 128-37-0 — concentração não disponível"
+  },
+  {
+    "id": "thinner-it-16",
+    "nome": "Thinner IT 16 (Nova Era)",
+    "sinonimos": [
+      "thinner",
+      "IT16",
+      "IT 16",
+      "diluente",
+      "solvente",
+      "Nova Era"
+    ],
+    "fabricante": "Nova Era Indústria e Comércio Ltda",
+    "revisao": "06/2024",
+    "pdf": "fichas/pdf/thinner-it-16.pdf",
+    "telefoneEmergencia": "(11) 2500-2992",
+    "uso": "Limpeza em geral (esmaltes não emulsionados, primers, sintéticos etc.).",
+    "perigos": [
+      "Líquidos e vapores altamente inflamáveis",
+      "Pode ser fatal se ingerido e penetrar nas vias respiratórias",
+      "Provoca irritação à pele",
+      "Pode provocar sonolência ou vertigem",
+      "Suspeita-se que prejudique a fertilidade ou o feto",
+      "Pode provocar danos ao sistema nervoso central, rins e fígado por exposição repetida ou prolongada",
+      "Tóxico para os organismos aquáticos"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "Remova a vítima para local ventilado e a mantenha em repouso numa posição que não dificulte a respiração. Caso sinta indisposição, contate um CENTRO DE INFORMAÇÃO TOXICOLÓGICA ou um médico. Leve esta FISPQ.",
+      "pele": "Lave a pele exposta com quantidade suficiente de água e sabão para remoção do material. Em caso de irritação cutânea: Consulte um médico. Leve esta FISPQ.",
+      "olhos": "Enxágue cuidadosamente com água durante vários minutos mantendo as pálpebras abertas. No caso de uso de lentes de contato, remova-as, se for fácil. Continue enxaguando. Caso a irritação ocular persista: consulte um médico. Leve esta FISPQ.",
+      "ingestao": "Não induza o vômito. Nunca forneça algo por via oral a uma pessoa inconsciente. Lave a boca da vítima com água em abundância. Caso sinta indisposição, contate um CENTRO DE INFORMAÇÃO TOXICOLÓGICA ou um médico. Leve esta FISPQ.",
+      "notasMedico": "Evite contato com o produto ao socorrer a vítima. Se necessário, o tratamento sintomático deve compreender, sobretudo, medidas de suporte como correção de distúrbios hidroeletrolíticos, metabólicos, além de assistência respiratória. Em caso de contato com a pele, não friccione o local atingido.\n\nSintomas mais importantes: irritação à pele com vermelhidão, dor e ressecamento; leve irritação ocular. Pode ser fatal se aspirado e penetrar nas vias respiratórias, com edema pulmonar e pneumonite química. A exposição única pode provocar efeitos narcóticos (tontura, sonolência, inconsciência, náusea, dor de cabeça, incoordenação motora) e, em altas concentrações, irritação das vias respiratórias. A exposição repetida ou prolongada pode provocar danos ao sistema nervoso central."
+    },
+    "composicao": "Mistura.\n• Hidrocarboneto aromático (tolueno) — CAS 108-88-3 — 35 a 45%\n• Álcool etílico 99% — CAS 64-17-5 — 45 a 65%\n• Acetato de etila — CAS 141-78-6 — 2 a 5%"
   }
 ]
