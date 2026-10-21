@@ -233,5 +233,36 @@
       "notasMedico": "Evite contato com o produto ao socorrer a vítima. Se necessário, o tratamento sintomático deve compreender, sobretudo, medidas de suporte como correção de distúrbios hidroeletrolíticos, metabólicos, além de assistência respiratória. Em caso de contato com a pele, não friccione o local atingido.\n\nSintomas mais importantes: irritação à pele com vermelhidão, dor e ressecamento; leve irritação ocular. Pode ser fatal se aspirado e penetrar nas vias respiratórias, com edema pulmonar e pneumonite química. A exposição única pode provocar efeitos narcóticos (tontura, sonolência, inconsciência, náusea, dor de cabeça, incoordenação motora) e, em altas concentrações, irritação das vias respiratórias. A exposição repetida ou prolongada pode provocar danos ao sistema nervoso central."
     },
     "composicao": "Mistura.\n• Hidrocarboneto aromático (tolueno) — CAS 108-88-3 — 35 a 45%\n• Álcool etílico 99% — CAS 64-17-5 — 45 a 65%\n• Acetato de etila — CAS 141-78-6 — 2 a 5%"
+  },
+  {
+    "id": "wd-40-multiusos-aerossol",
+    "nome": "WD-40 Produto Multiusos (aerossol)",
+    "sinonimos": [
+      "WD40",
+      "WD 40",
+      "desengripante",
+      "lubrificante spray",
+      "antiferrugem",
+      "multiuso"
+    ],
+    "fabricante": "WD-40 Company Brasil Ltda",
+    "revisao": "2026-04-27",
+    "pdf": "fichas/pdf/wd-40-multiusos-aerossol.pdf",
+    "foto": "fichas/fotos/wd-40-multiusos-aerossol.jpg",
+    "telefoneEmergencia": "(41) 2109-8025",
+    "uso": "Lubrificante e anticorrosivo multiuso (derivados de petróleo).",
+    "perigos": [
+      "Aerossol extremamente inflamável",
+      "Recipiente pressurizado: pode romper se aquecido",
+      "Pode ser fatal se ingerido e penetrar nas vias respiratórias"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "Remova a vítima para local ventilado e a mantenha em repouso numa posição que não dificulte a respiração. Caso sinta indisposição, contate um CENTRO DE INFORMAÇÃO TOXICOLÓGICA ou um médico. Leve este documento.",
+      "pele": "Lave a pele exposta com quantidade suficiente de água para remoção do material. Remova e isole roupas e sapatos contaminados. Em caso de irritação cutânea: Consulte um médico. Leve este documento.",
+      "olhos": "Enxágue cuidadosamente com água durante vários minutos. No caso de uso de lentes de contato, remova-as, se for fácil. Continue enxaguando. Caso a irritação ocular persista: consulte um médico. Leve este documento.",
+      "ingestao": "Não induza o vômito. Nunca forneça algo por via oral a uma pessoa inconsciente. Lave a boca da vítima com água em abundância. Caso sinta indisposição, contate um CENTRO DE INFORMAÇÃO TOXICOLÓGICA ou um médico. Leve este documento.",
+      "notasMedico": "Evite contato com o produto ao socorrer a vítima. Se necessário, o tratamento sintomático deve compreender, sobretudo, medidas de suporte como correção de distúrbios hidroeletrolíticos, metabólicos, além de assistência respiratória. Em caso de contato com a pele não friccione o local atingido.\n\nSintomas mais importantes: pode ser fatal se ingerido e penetrar nas vias respiratórias."
+    },
+    "composicao": "Mistura.\n• Destilados de petróleo levemente tratados com hidrogênio — CAS 64742-47-8 — 30 a 40%\n• Butano — CAS 106-97-8 — 20 a 30%\n• Propano — CAS 74-98-6 — 5 a 10%"
   }
 ]
