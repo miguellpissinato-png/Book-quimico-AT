@@ -58,8 +58,40 @@ describe('nome do PDF baixado', async () => {
   it('não tem acentos nem símbolos (navegadores trocam o nome por "download")', () => {
     for (const p of produtos) {
       const nome = nomeArquivo(p);
-      expect(nome, p.id).toMatch(/^FDS - [A-Za-z0-9 ()\-.,]+\.pdf$/);
+      expect(nome, p.id).toMatch(/^FDS (NAO ORIGINAL \(referencia\) )?- [A-Za-z0-9 ()\-.,]+\.pdf$/);
     }
     expect(nomeArquivo({ id: 'x', nome: 'Álcool gel 70° INPM' })).toBe('FDS - Alcool gel 70 INPM.pdf');
+  });
+});
+
+describe('FDS não original (ficha de referência de outro produto)', async () => {
+  const { nomeArquivo } = await import('../src/lib/fichas');
+  const naoOriginais = produtos.filter((p) => p.fdsNaoOriginal);
+
+  it('diz de qual produto é a ficha e por que não há a original', () => {
+    for (const p of naoOriginais) {
+      expect(p.fdsNaoOriginal?.referencia?.trim(), p.id).toBeTruthy();
+      expect(p.fdsNaoOriginal?.motivo?.trim(), p.id).toBeTruthy();
+    }
+  });
+
+  it('ficha descrita como genérica ou de referência está marcada como não original', () => {
+    const suspeita = /gen[eé]ric|refer[eê]ncia|n[aã]o original/i;
+    for (const p of produtos) {
+      const textos = [p.nome, p.fabricante, p.aviso, ...(p.sinonimos || [])].filter(Boolean).join(' ');
+      if (suspeita.test(textos)) expect(p.fdsNaoOriginal, `${p.id} parece usar FDS de outro produto`).toBeTruthy();
+    }
+  });
+
+  it('o PDF tem a capa e a faixa de "FDS NÃO ORIGINAL"', () => {
+    for (const p of naoOriginais) {
+      const pdf = fs.readFileSync(path.join('public', p.pdf!));
+      expect(pdf.includes('FDSNAOORIGINAL'), `${p.id}: marque o PDF antes de publicar`).toBe(true);
+    }
+  });
+
+  it('o PDF baixado avisa no nome do arquivo', () => {
+    for (const p of naoOriginais) expect(nomeArquivo(p), p.id).toMatch(/^FDS NAO ORIGINAL/);
+    for (const p of produtos.filter((x) => !x.fdsNaoOriginal)) expect(nomeArquivo(p)).toMatch(/^FDS - /);
   });
 });

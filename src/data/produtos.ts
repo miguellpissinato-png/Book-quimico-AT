@@ -37,8 +37,23 @@ export type Produto = {
   destaque?: boolean;
   /** Marca a ficha como dado de exemplo: o app exibe um aviso amarelo. */
   exemplo?: boolean;
-  /** Aviso em destaque na ficha (ex.: FDS genérica usada no lugar da específica). */
+  /** Aviso extra em destaque na ficha. */
   aviso?: string;
+  /**
+   * Preencha SEMPRE que a FDS cadastrada não for a do produto exato (FDS genérica ou de
+   * referência). O app mostra "FDS NÃO ORIGINAL" na ficha, na grade de emergência, na lista
+   * de documentos, no nome do PDF baixado e no texto enviado ao médico.
+   */
+  fdsNaoOriginal?: FdsNaoOriginal;
+};
+
+export type FdsNaoOriginal = {
+  /** De qual produto é a FDS usada no lugar. Ex.: "fluido de silicone AK 100 (Wacker)". */
+  referencia: string;
+  /** Por que não há a FDS original. Ex.: "O fornecedor informou que não tem a FDS deste modelo." */
+  motivo: string;
+  /** O que a FDS de referência pode não cobrir ou em que difere do produto real. */
+  limitacoes?: string;
 };
 
 export const PRODUTOS: Produto[] = dados as Produto[];

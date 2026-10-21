@@ -41,6 +41,7 @@ export function Emergencia() {
             {lista.map((p) => (
               <button key={p.id} type="button" className="cartao-produto" onClick={() => escolher(p)}>
                 <FotoEmbalagem produto={p} />
+                {p.fdsNaoOriginal && <span className="selo-nao-original">FDS não original</span>}
                 <span className="nome">{p.nome}</span>
               </button>
             ))}

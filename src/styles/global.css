@@ -1292,3 +1292,52 @@ fieldset.campo {
     min-height: 2.75rem;
   }
 }
+
+/* ---------- FDS não original (ficha de referência de outro produto) ---------- */
+.alerta-nao-original {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  border: 2px solid #c2410c;
+  background: #fff1e7;
+  color: #4a1a00;
+  border-radius: var(--raio-p);
+  padding: 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+.alerta-nao-original > svg {
+  flex-shrink: 0;
+  color: #c2410c;
+  margin-top: 0.0625rem;
+}
+.alerta-nao-original .textos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 0;
+}
+.alerta-nao-original .titulo {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #9a3412;
+}
+.alerta-nao-original .final {
+  font-weight: 700;
+}
+.selo-nao-original {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  background: #c2410c;
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.3125rem 0.5rem;
+  border-radius: 0.375rem;
+}

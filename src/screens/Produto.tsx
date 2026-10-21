@@ -98,6 +98,8 @@ export function Produto({ id, origem }: { id: string; origem: 'emergencia' | 'do
             </div>
           </div>
 
+          {p.fdsNaoOriginal && <AlertaFdsNaoOriginal p={p} />}
+
           {p.exemplo && (
             <div className="faixa-aviso exemplo">
               <strong>Ficha de exemplo.</strong> Os textos abaixo ainda não são da FDS real deste produto.
@@ -129,7 +131,7 @@ export function Produto({ id, origem }: { id: string; origem: 'emergencia' | 'do
             <>
               <a className="botao primario" href={pdf} target="_blank" rel="noopener" onClick={() => registrar('abriu_pdf')}>
                 <Icone nome="documento" tamanho={20} />
-                Abrir ficha completa (PDF)
+                {p.fdsNaoOriginal ? 'Abrir FDS de referência (não original)' : 'Abrir ficha completa (PDF)'}
               </a>
               <div className="botoes-2">
                 <a className="botao" href={pdf} download={nomeArquivo(p)} onClick={() => registrar('baixou_pdf')}>
@@ -210,7 +212,9 @@ function ContatoFabricante({ p, aoLigar }: { p: TProduto; aoLigar: () => void })
   return (
     <div className="cartao contato-fabricante">
       <div className="textos">
-        <span className="cartao-titulo">Emergência do fabricante</span>
+        <span className="cartao-titulo">
+          {p.fdsNaoOriginal ? 'Emergência da empresa da FDS de referência' : 'Emergência do fabricante'}
+        </span>
         <span className="numero">{p.telefoneEmergencia || 'Veja a seção 1 da ficha completa'}</span>
       </div>
       {p.telefoneEmergencia && (
@@ -218,6 +222,25 @@ function ContatoFabricante({ p, aoLigar }: { p: TProduto; aoLigar: () => void })
           <Icone nome="telefone" />
         </a>
       )}
+    </div>
+  );
+}
+
+/** Faixa forte no topo da ficha quando a FDS não é a do produto exato. */
+function AlertaFdsNaoOriginal({ p }: { p: TProduto }) {
+  const f = p.fdsNaoOriginal!;
+  return (
+    <div className="alerta-nao-original" role="alert">
+      <Icone nome="alerta" tamanho={26} espessura={2.2} />
+      <div className="textos">
+        <strong className="titulo">FDS não original</strong>
+        <span>
+          Esta ficha é de <b>outro produto</b>: {f.referencia}. Use só como orientação geral.
+        </span>
+        <span>{f.motivo}</span>
+        {f.limitacoes && <span>{f.limitacoes}</span>}
+        <span className="final">Avise o médico que a ficha não é a original e leve a embalagem do produto.</span>
+      </div>
     </div>
   );
 }

@@ -169,7 +169,7 @@
   },
   {
     "id": "oleo-bomba-vacuo-eos-vpo-46",
-    "nome": "Óleo para bomba de vácuo VPO-46 (EOS) · FDS genérica",
+    "nome": "Óleo para bomba de vácuo VPO-46 (EOS)",
     "sinonimos": [
       "óleo de vácuo",
       "óleo bomba de vácuo",
@@ -181,12 +181,16 @@
       "TIPI",
       "óleo genérico"
     ],
-    "fabricante": "EOS (produto em uso) · FDS de referência: Refrigeração TIPI Ltda",
+    "fabricante": "EOS (produto em uso)",
     "revisao": "01/2025",
     "pdf": "fichas/pdf/oleo-bomba-vacuo-eos-vpo-46.pdf",
     "telefoneEmergencia": "(67) 2107-6245",
     "uso": "Óleo lubrificante para bombas de vácuo.",
-    "aviso": "Ficha genérica de referência. O óleo em uso é o VPO-46 da EOS, que informou não ter a FDS específica deste modelo. Esta FDS é de um óleo ISO VG 46 equivalente, da Refrigeração TIPI, e o telefone de emergência abaixo é da TIPI. Leve também a embalagem ao médico.",
+    "fdsNaoOriginal": {
+      "referencia": "óleo lubrificante ISO VG 46 da Refrigeração TIPI Ltda",
+      "motivo": "O fornecedor EOS informou que não tem a FDS específica do VPO-46 e enviou esta ficha genérica.",
+      "limitacoes": "A composição e os aditivos do óleo da EOS podem ser diferentes. O telefone de emergência abaixo é da TIPI, não da EOS."
+    },
     "perigos": [
       "Não classificado como perigoso (GHS)",
       "A injeção de alta pressão sob a pele pode causar sérios danos",
@@ -267,7 +271,7 @@
   },
   {
     "id": "pasta-termica-silicone-ak100",
-    "nome": "Pasta térmica de silicone AK-100 · FDS genérica",
+    "nome": "Pasta térmica de silicone AK-100",
     "sinonimos": [
       "pasta térmica",
       "pasta de silicone",
@@ -277,29 +281,34 @@
       "AK-100",
       "AK100",
       "silicone",
+      "óxido de zinco",
       "耕暉",
       "Taiwan",
       "chinês",
       "mandarim"
     ],
-    "fabricante": "耕暉股份有限公司 (Taipé, Taiwan) · FDS de referência: Wacker Chemie AG (AK 100)",
-    "revisao": "2023-06-29",
-    "pdf": "fichas/pdf/pasta-termica-ak100-fds-generica.pdf",
+    "fabricante": "耕暉股份有限公司 (Taipé, Taiwan) · rótulo em chinês",
+    "revisao": "2024-11-26",
+    "pdf": "fichas/pdf/pasta-termica-ak100-referencia-mg860.pdf",
     "foto": "fichas/fotos/pasta-termica-silicone-ak100.jpg",
-    "uso": "Pasta térmica para dissipadores de calor.",
-    "aviso": "Ficha genérica de referência, em inglês. O produto da AT é a pasta térmica AK-100 de uma empresa de Taiwan (rótulo em chinês), sem FDS própria. Esta é a FDS do fluido de silicone AK 100 (Wacker), que corresponde só à base de silicone da pasta: as cargas minerais da pasta não estão cobertas. Os primeiros socorros abaixo foram traduzidos dela. A ficha não tem telefone de emergência no Brasil: use o SAMU (192) ou o Disque-Intoxicação. Leve a embalagem ao médico.",
+    "telefoneEmergencia": "(11) 4349-1907",
+    "uso": "Pasta térmica para dissipadores de calor (de −40 a 200 °C).",
+    "fdsNaoOriginal": {
+      "referencia": "pasta térmica de silicone 860 da MG Chemicals",
+      "motivo": "A AK-100 tem rótulo só em chinês e não foi encontrada FDS do fabricante; a revenda também não tem dados técnicos.",
+      "limitacoes": "A proporção de óxido de zinco e os aditivos da AK-100 são desconhecidos (a pasta 860 tem 70% de óxido de zinco). O telefone de emergência abaixo é o da MG Chemicals no Brasil."
+    },
     "perigos": [
-      "Não classificado como perigoso (GHS)",
-      "Derramamentos deixam o piso muito escorregadio"
+      "Muito tóxico para os organismos aquáticos, com efeitos prolongados",
+      "Em incêndio, os fumos metálicos podem causar febre dos metais (calafrios e febre 4 a 12 horas depois)"
     ],
     "primeirosSocorros": {
-      "geral": "Procure atendimento médico se ocorrer irritação ou outros sintomas. Antes de procurar atendimento, retire roupas e sapatos contaminados. Leve uma cópia da FDS ao atendimento médico.",
-      "inalacao": "Nas condições normais, o material não pode ser inalado. Não é necessário tratamento especial.",
-      "pele": "Após o contato com a pele, remova o excesso com pano ou papel. Use um limpador de mãos sem água para remover o máximo possível do material restante. Lave com água e sabão.",
-      "olhos": "Em caso de contato com os olhos, mantenha imediatamente as pálpebras abertas e lave com bastante água por pelo menos 15 minutos.",
-      "ingestao": "Nenhuma medida especial é necessária após a ingestão.",
-      "notasMedico": "A FDS não traz notas específicas para o médico.\n\nToxicologia (seção 11): toxicidade aguda oral DL50 > 5000 mg/kg e dérmica DL50 > 2008 mg/kg, sem mortalidade nem sinais clínicos de toxicidade nas doses testadas. Não irrita a pele nem os olhos e não é sensibilizante."
+      "inalacao": "Retirar a pessoa para o ar fresco e mantê-la confortável para respirar. Se não se sentir bem: contactar um CENTRO DE INFORMAÇÃO ANTIVENENOS ou um médico.",
+      "pele": "Em geral o produto não é irritante para a pele. Lavar com água abundante ou tomar um duche. Retirar o vestuário contaminado e lavá-lo antes de o voltar a utilizar.",
+      "olhos": "Enxaguar cuidadosamente com água durante 15 minutos. Retirar as lentes de contacto, se existirem e forem fáceis de retirar. Continuar a enxaguar. Se os sintomas persistirem, consultar o médico.",
+      "ingestao": "Enxaguar a boca. NÃO provocar o vómito. Se os sintomas persistirem, consultar o médico.",
+      "notasMedico": "A FDS não traz informações sobre cuidados médicos urgentes ou tratamentos especiais.\n\nSintomas mais importantes: em caso de exposição a fumos metálicos, podem ocorrer arrepios e sintomas de febre 4 a 12 horas após a exposição."
     },
-    "composicao": "Composição exata da pasta desconhecida.\n• Base: polidimetilsiloxano (óleo de silicone), o produto coberto pela FDS de referência — nº CAS não informado\n• Pastas térmicas de silicone costumam conter também cargas minerais, como óxido de zinco (não informado no rótulo)"
+    "composicao": "Composição exata da AK-100 desconhecida. Na pasta de referência (MG Chemicals 860):\n• Óxido de zinco — CAS 1314-13-2 — 70%\n• Restante: óleo de silicone e aditivos não perigosos"
   }
 ]

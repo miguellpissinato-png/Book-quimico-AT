@@ -99,6 +99,24 @@ Para colocar as reais:
 ```
 
 Só `id` e `nome` são obrigatórios — o que não for preenchido simplesmente não aparece.
+
+### Quando a FDS não é a do produto exato
+
+Se o fornecedor não tem a FDS do produto em uso e for preciso usar a ficha de **outro** produto
+como referência, preencha **sempre** o campo `fdsNaoOriginal`:
+
+```jsonc
+"fdsNaoOriginal": {
+  "referencia": "pasta térmica de silicone 860 da MG Chemicals",  // de qual produto é a ficha
+  "motivo": "O fornecedor não tem a FDS deste modelo.",             // por que não há a original
+  "limitacoes": "A composição exata é desconhecida."                 // o que a ficha pode não cobrir
+}
+```
+
+Com ele, o app mostra **FDS NÃO ORIGINAL** na ficha (faixa laranja no topo), na grade de
+emergência, na lista de documentos, nos botões do PDF, no nome do arquivo baixado e no texto
+enviado pelo WhatsApp. O PDF também precisa levar a capa e a faixa de aviso em todas as páginas
+(o teste `npm test` falha se faltar), para o aviso chegar junto quando a ficha é enviada ao médico.
 `npm test` confere se o arquivo está correto (ids repetidos, PDFs/fotos que não existem etc.).
 
 > ⚠️ Os textos de primeiros socorros devem ser **copiados da FDS oficial** do fabricante. Revise

@@ -18,7 +18,7 @@ export function nomeArquivo(p: Produto): string {
     .replace(/[^A-Za-z0-9 ()\-.,]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
-  return `FDS - ${nome}.pdf`;
+  return p.fdsNaoOriginal ? `FDS NAO ORIGINAL (referencia) - ${nome}.pdf` : `FDS - ${nome}.pdf`;
 }
 
 export type ResultadoEnvio = 'arquivo' | 'link' | 'copiado' | 'cancelado';
@@ -47,7 +47,9 @@ export async function prepararArquivo(p: Produto): Promise<void> {
  */
 export async function compartilharPdf(p: Produto): Promise<ResultadoEnvio> {
   const url = urlPdf(p);
-  const texto = `Ficha de segurança (FDS) — ${p.nome}${p.fabricante ? ` · ${p.fabricante}` : ''}`;
+  const texto = p.fdsNaoOriginal
+    ? `ATENÇÃO: FDS NÃO ORIGINAL. Esta é a ficha de outro produto (${p.fdsNaoOriginal.referencia}), usada só como referência para: ${p.nome}. Leve a embalagem do produto.`
+    : `Ficha de segurança (FDS) — ${p.nome}${p.fabricante ? ` · ${p.fabricante}` : ''}`;
   const arquivo = arquivosProntos.get(p.id);
   try {
     if (arquivo && navigator.canShare?.({ files: [arquivo] })) {

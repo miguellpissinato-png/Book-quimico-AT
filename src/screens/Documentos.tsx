@@ -54,6 +54,7 @@ export function Documentos() {
                 </span>
                 <span className="textos">
                   <span className="nome">{p.nome}</span>
+                  {p.fdsNaoOriginal && <span className="selo-nao-original">FDS não original</span>}
                   <span className="meta">
                     {[p.fabricante, p.revisao && `FDS rev. ${formatarRevisao(p.revisao)}`].filter(Boolean).join(' · ')}
                   </span>
