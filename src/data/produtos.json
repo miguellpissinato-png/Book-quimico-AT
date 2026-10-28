@@ -1,19 +1,22 @@
 [
   {
     "id": "alcool-gel-70",
-    "nome": "Álcool gel 70° INPM (Facilita)",
+    "nome": "Álcool gel 70° (All Clean antisséptico para mãos)",
     "sinonimos": [
       "álcool 70",
+      "álcool em gel",
       "álcool etílico",
       "etanol",
-      "Facilita",
+      "antisséptico",
+      "higienizador de mãos",
+      "All Clean",
       "Audax"
     ],
-    "fabricante": "Audax Química (Audax Co)",
-    "revisao": "04/2021",
+    "fabricante": "Audax Química Ind. e Comércio de Produtos para Higiene e Limpeza Ltda.",
+    "revisao": "01/2024",
     "pdf": "fichas/pdf/alcool-gel-70.pdf",
-    "telefoneEmergencia": "0800 014 8110",
-    "uso": "Desinfetante de uso geral em gel à base de álcool. Limpeza de superfícies laváveis em geral: vitrines, espelhos, vidros, pisos, fórmicas, azulejos, bancadas, equipamentos e utensílios.",
+    "telefoneEmergencia": "0800 722 6001",
+    "uso": "Antisséptico higienizador de mãos em gel (assepsia das mãos).",
     "perigos": [
       "Líquido e vapores altamente inflamáveis",
       "Provoca irritação ocular grave",
@@ -22,11 +25,11 @@
       "Suspeito de prejudicar a fertilidade ou o feto"
     ],
     "primeirosSocorros": {
-      "inalacao": "Mova a vítima para local ventilado. Aplicar respiração artificial somente se a respiração cessar. Obtenha auxílio médico.",
-      "pele": "Lavar o local com água corrente e sabão. Remover as roupas e os sapatos da vítima se necessário. Lavar as roupas antes de usá-las novamente. Procurar ajuda médica e levar essa FISPQ.",
-      "olhos": "Lavar imediatamente os olhos com água corrente por no mínimo 15 minutos, mantendo as pálpebras abertas. Caso o desconforto persista, consultar um médico e apresentar embalagem/rótulo do produto. Leve esta FISPQ.",
-      "ingestao": "Lave a boca da vítima com água em abundância. NÃO INDUZA O VÔMITO. Não ofereça nada por via oral a uma pessoa inconsciente. Caso ocorra vômito, manter a cabeça mais baixa do que o tronco para evitar aspiração do produto. Procure atenção médica. Leve esta FISPQ.",
-      "notasMedico": "Mantenha a vítima em repouso e aquecida. Não forneça nada pela boca a uma pessoa inconsciente. O tratamento sintomático deve compreender, sobretudo, medidas de suporte como correção de distúrbios hidroeletrolíticos, metabólicos, além de assistência respiratória.\n\nSintomas mais importantes: pode provocar dermatite por exposição prolongada ou repetida. Provoca depressão do sistema nervoso central."
+      "inalacao": "Deixar a vítima respirar ar fresco. Em caso de intoxicação, procurar ajuda médica e levar esta FDS.",
+      "pele": "Em grandes quantidades, remover roupas e sapatos contaminados e lavar imediatamente as partes atingidas com água em abundância. Se houver sintomas, ligar para o CEATOX (0800 722 6001) ou procurar um médico levando a embalagem, o rótulo ou esta FDS.",
+      "olhos": "Lavar os olhos com água corrente por no mínimo 15 minutos, mantendo-os abertos. Remover lentes de contato, se for fácil, e enxaguar novamente. Se o desconforto persistir, consultar um médico levando a embalagem/rótulo e esta FDS.",
+      "ingestao": "NÃO INDUZIR O VÔMITO. Lavar a boca da vítima com água em abundância. Nunca dar nada por via oral a uma pessoa inconsciente. Ligar para o CEATOX (0800 722 6001) ou procurar um médico levando a embalagem, o rótulo ou esta FDS.",
+      "notasMedico": "Se necessário, tratamento sintomático com medidas de suporte, como correção de distúrbios hidroeletrolíticos e metabólicos.\n\nSintomas mais importantes: se ingerido, náusea, vômito, dor de cabeça, tontura, confusão mental, fadiga e efeito embriagante. Irritação ocular com vermelhidão e lacrimejamento; irritação e ressecamento da pele."
     },
     "composicao": "Mistura.\n• Álcool etílico — CAS 64-17-5 — 70 a 90%\n• Carbômero — CAS 9003-01-4 — 0,1 a 1,0%"
   },
