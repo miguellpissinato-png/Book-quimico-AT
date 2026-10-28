@@ -314,5 +314,45 @@
       "notasMedico": "A FDS não traz informações sobre cuidados médicos urgentes ou tratamentos especiais.\n\nSintomas mais importantes: em caso de exposição a fumos metálicos, podem ocorrer arrepios e sintomas de febre 4 a 12 horas após a exposição."
     },
     "composicao": "Composição exata da AK-100 desconhecida. Na pasta de referência (MG Chemicals 860):\n• Óxido de zinco — CAS 1314-13-2 — 70%\n• Restante: óleo de silicone e aditivos não perigosos"
+  },
+  {
+    "id": "colorgin-uso-geral-branco-brastemp-55201",
+    "nome": "Spray Colorgin Uso Geral Premium Branco Brastemp 400 ml",
+    "sinonimos": [
+      "tinta spray",
+      "spray branco",
+      "Colorgin",
+      "Uso Geral",
+      "Brastemp",
+      "branco brastemp",
+      "55201",
+      "Sherwin-Williams",
+      "spray"
+    ],
+    "fabricante": "Sherwin-Williams do Brasil – Divisão Sumaré",
+    "revisao": "2026-03-01",
+    "pdf": "fichas/pdf/colorgin-uso-geral-branco-brastemp-55201.pdf",
+    "foto": "fichas/fotos/colorgin-uso-geral-branco-brastemp-55201.jpg",
+    "telefoneEmergencia": "0800 014 8110",
+    "uso": "Tinta spray de uso geral (pintura de metais, madeira e superfícies diversas).",
+    "perigos": [
+      "Aerossol extremamente inflamável",
+      "Recipiente pressurizado: pode romper se aquecido",
+      "Pode ser fatal se ingerido e penetrar nas vias respiratórias",
+      "Provoca irritação à pele",
+      "Provoca irritação ocular grave",
+      "Pode provocar irritação das vias respiratórias",
+      "Pode provocar sonolência ou vertigem",
+      "Pode provocar danos aos órgãos por exposição repetida ou prolongada",
+      "Tóxico para os organismos aquáticos, com efeitos prolongados"
+    ],
+    "primeirosSocorros": {
+      "inalacao": "Remova a vítima para local ventilado e mantenha-a em repouso numa posição que favoreça a respiração. Se houver falta de respiração, respiração irregular ou parada respiratória, pessoal treinado deve fazer respiração artificial ou fornecer oxigênio.",
+      "pele": "Lavar a pele contaminada com muita água. Remover roupas e calçados contaminados.",
+      "olhos": "Lavar imediatamente os olhos com água em abundância, levantando e abaixando as pálpebras de vez em quando.",
+      "ingestao": "Lavar a boca com água. NÃO induzir o vômito. Consultar imediatamente um médico ou um centro de controle de intoxicação.",
+      "notasMedico": "Tratar sintomaticamente. Contatar um centro de informação toxicológica se grandes quantidades foram ingeridas ou inaladas.\n\nSintomas mais importantes: irritação das vias respiratórias, tosse, náusea ou vômito, dor de cabeça, sonolência, tontura e inconsciência (inalação); dor, lacrimejamento e vermelhidão (olhos); irritação e vermelhidão (pele)."
+    },
+    "composicao": "Mistura.\n• Etilbenzeno — CAS 100-41-4 — 10 a 25%\n• Xileno — CAS 1330-20-7 — 10 a 25%\n• n-Butano (propelente) — CAS 106-97-8 — 10 a 25%\n• Acetona — CAS 67-64-1 — 10 a 25%\n• Propano (propelente) — CAS 74-98-6 — 10 a 25%\n• Dióxido de titânio — CAS 13463-67-7 — até 10%"
   }
 ]
